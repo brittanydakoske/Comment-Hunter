@@ -9,13 +9,16 @@
     "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "serve": "json-server --watch db.json",
-    "build": "react-scripts build",
+    "serve": "cd .. && npm start",
+    "dev": "npm run serve & npm run start",
+    "build": "INLINE_RUNTIME_CHUNK=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,8 +41,7 @@
     ]
   },
   "devDependencies": {
-    "dotenv": "^8.2.0",
-    "json-server": "^0.16.3",
-    "nodemon": "^2.0.7"
-  }
+    "dotenv": "^8.2.0"
+  },
+  "proxy": "http://localhost:3001"
 }
