@@ -11,9 +11,9 @@ import './styles/App.css'; //styles/App.css ok
 
 function App() {
 
-  // onSelect((event) => {
-  //   //console.log(event);
-  // }, );
+  const onSelect = (event) => {
+    console.log(event);
+  }
 
   var reDraw = bubbleData.map(v => ({
     v: v.values,
@@ -31,10 +31,10 @@ function App() {
       <h1>Comment Hunter</h1>
       
       <div className="graph-container">
-          <BubbleChart data={reDraw} useLabels />
-          {/* <Sunburst
+          {/* <BubbleChart data={reDraw} useLabels /> */}
+          <Sunburst
           data={SunburstData}
-          onSelect={this.onSelect}
+          onSelect={onSelect}
           scale="linear" // or exponential
           tooltipContent={<div class="sunburstTooltip"  />} // eslint-disable-line
           tooltip
@@ -42,7 +42,7 @@ function App() {
           keyId="anagraph"
           width="580"
           height="500"
-        /> */}
+        />
         </div>
       
 
