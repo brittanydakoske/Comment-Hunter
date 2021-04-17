@@ -7,7 +7,7 @@ Base = declarative_base()
 
 
 class Stock(Base):
-    __tablename__ = 'stocks'
+    __tablename__ = 'Stocks'
     id = Column(Integer, primary_key=True)
     ticker = Column(String)
     name = Column(String)
