@@ -1,3 +1,4 @@
+const models = require("../database/models");
 const sampleData =
     [
         {
@@ -86,4 +87,20 @@ const get1w = async (req, res) => {
     }
 }
 
-module.exports = { get1h, get1d, get1w }
+/* query all config and haiku data */
+const getAll = async (req, res) => {
+    try {
+        const stocks = await models.Stock.findAll();
+        return res.status( 200 ).json( { stocks } );
+    } catch ( e ) {
+        return res.status( 500 )
+    }
+}
+
+module.exports =
+    {
+        get1h,
+        get1d,
+        get1w,
+        getAll
+    }
