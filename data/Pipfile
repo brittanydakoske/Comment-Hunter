@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 praw = "*"
 sqlalchemy = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
