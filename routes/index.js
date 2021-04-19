@@ -6,7 +6,6 @@ const router = express.Router();
 router.get( '/1h', controllers.get1h );
 router.get( '/1d', controllers.get1d );
 router.get( '/1w', controllers.get1w );
-router.get( '/test', controllers.getAll )
 
 module.exports = router;
 
