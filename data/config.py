@@ -2,4 +2,4 @@
 from decouple import config
 
 # this is the test database #
-DATABASE_URI = config('TEST_DATABASE_URI')
+DATABASE_URI = config('DEV_DATABASE_URI')
