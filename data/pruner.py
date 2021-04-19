@@ -5,9 +5,8 @@ from crud import Session
 
 while True:
     s = Session()
-    cut_off = datetime.now() - timedelta(hours=12)
+    cut_off = datetime.now() - timedelta(hours=168)
     s.execute(delete(Stock).where(Stock.date < cut_off))
     s.commit()
     s.close()
-    print('hi')
-    time.sleep(10)
+    time.sleep(300)
