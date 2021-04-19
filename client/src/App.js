@@ -7,6 +7,8 @@ import BubbleChart from "./components/BubbleChart";
 import SunburstData from './components/data1';
 import {bubbleData} from  './components/data2';
 import './styles/App.css'; //styles/App.css ok
+import Navbar from "./components/Navbar";
+import Navigationbar from "./components/Navigationbar";
 
 const onSelect = (event) => {
   console.log(event);
@@ -14,7 +16,8 @@ const onSelect = (event) => {
 
 function App() {
   const [chart, setChart] = useState( 'Sunburst' );
-  const [data, setData] = useState("just an example")
+  const [data, setData] = useState("just an example");
+
 
   /* check the console, you will see that the initial state
   * "just an example" shows up first. Then the function useEffect
@@ -47,8 +50,9 @@ function App() {
 
   return (
       <div className="App">
-        <h1>Comment Hunter</h1>
-
+        
+        <Navigationbar setChart={setChart}/>
+        {/* <Navbar/> */}
         <div className="graph-container">
 
           {/*You can say, if "chart" (state) us "sunburst, show the Sunburst graph*/}

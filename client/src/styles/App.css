@@ -228,7 +228,7 @@ footer {
 }
 
 .sunburstTooltip {
-position: absolute; 
+/* position: absolute;  */
 color:'black'; 
 /* z-index:10;  */
 background-color: #e2e2e2; 
@@ -238,9 +238,58 @@ text-align: center;
 
 .graph-container {
   background-color: white;
-  /* width: 600px;
-  height: 600px; */
+  /* width: 600px; */
+  /* height: 1000px; */
   display: flex;
   justify-content: center;
+}
+
+.menu {
+  /* position: static; */
+  width: 20px;
+  /* padding: 0 15px; */
+  margin: 32px 25px;
+  cursor: pointer;
+  visibility: visible;
+  z-index: 1;
+  /* max-height: 15px; */
+}
+
+.navbar {
+  display: flex; 
+  flex-wrap: wrap; 
+}
+
+.navbar h1 {
+  margin: 20px auto;
+}
+
+.item-1 {
+  /* flex-grow: 1; */
+}
+
+.sidebar {
+  position: absolute;
+  /* display: flex; */
+  /* margin: 5px 0px; */
+  /* padding: 5px 65px; */
+  height: 97vh;
+  width: 300px;
+  background-color: black;
+  visibility: visible;
+}
+
+.topside {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #3040B8;
+}
+
+.sidebar h2 {
+  /* max-height: 15px; */
+}
+
+label {
+  color: white;
 }
 
