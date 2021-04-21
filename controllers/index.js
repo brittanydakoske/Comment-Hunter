@@ -1,25 +1,10 @@
-const moment = require('moment')
-const models = require("../database/models");
+const {getStocksByHour} = require("../util/getStocksByHour");
 const {filterStocks} = require("../util/filterStocks");
-const { Op } = require('sequelize')
-
-const getStocksByHour = async ( hours ) => {
-    const timezoneAdjustment = 7
-    const date = moment().subtract(timezoneAdjustment + hours, 'hours').toDate()
-    return await models.Stock.findAll({
-        where: {
-            date: {
-                [Op.gte]: date
-            }
-        },
-        order: [['date', 'DESC']]
-    })
-}
 
 const get1h = async (req, res) => {
     try {
         return getStocksByHour( 1 )
-            .then( stocks => res.status( 200 ).json( filterStocks( stocks ) ))
+            .then( stocks => res.status( 200 ).json( filterStocks( stocks ).slice(0, 10) ))
     } catch ( e ) {
         return res.status( 500 )
     }
