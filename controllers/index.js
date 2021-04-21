@@ -1,32 +1,19 @@
 const moment = require('moment')
 const models = require("../database/models");
+const {filterStocks} = require("../util/filterStocks");
 const { Op } = require('sequelize')
 
-const filterStocks = ( stocks ) => {
-    let set = []
-    stocks.forEach( s => {
-        let index = set.findIndex( elem => elem.name === s.name)
-        index !== -1 ? set[index].value += 1 : set.push(
-            {
-                ticker: s.ticker,
-                name: s.name,
-                sector: s.sector,
-                value: 1
-            })
-    })
-    return set.sort( (a, b) => b.value - a.value).slice(0, 20)
-}
 
 const get1h = async (req, res) => {
     try {
         const stocks = await models.Stock.findAll({
             where: {
                 date: {
-                    [Op.gte]: moment().subtract(1, 'hours').toDate()
+                    [Op.gte]: moment().subtract(8, 'hour').toDate()
                 }
             }
         })
-        return res.status( 200 ).json( filterStocks( stocks ) );
+        return res.status( 200 ).json( filterStocks(stocks).slice(0, 10) );
     } catch ( e ) {
         return res.status( 500 )
     }
@@ -41,7 +28,7 @@ const get1d = async (req, res) => {
                 }
             }
         })
-        return res.status( 200 ).json( filterStocks( stocks ) );
+        return res.status( 200 ).json( filterStocks(stocks).slice(0, 10) );
     } catch ( e ) {
         return res.status( 500 )
     }
@@ -56,7 +43,7 @@ const get1w = async (req, res) => {
                 }
             }
         })
-        return res.status( 200 ).json( filterStocks( stocks ) );
+        return res.status( 200 ).json( filterStocks(stocks).slice(0, 10) );
     } catch ( e ) {
         return res.status( 500 )
     }
