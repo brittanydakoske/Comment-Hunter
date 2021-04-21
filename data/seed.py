@@ -57,7 +57,7 @@ for i in range(100):
     )
 
 max_num_of_days_old = 7
-for x in range(50):
+for x in range(8000):
     r = random.randint(0, len(stockList) - 1)
     s.add(generateStock(
         stockList[r]["ticker"], stockList[r]["name"], stockList[r]["sector"], random.randint(0, max_num_of_days_old))
