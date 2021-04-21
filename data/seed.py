@@ -8,7 +8,7 @@ from random_word import RandomWords
 
 
 def generateDate(days_to_subtract):
-    return (datetime.now() - timedelta(days=days_to_subtract)).isoformat()
+    return datetime.now() - timedelta(days=days_to_subtract)
 
 
 def generateStock(ticker, name, sector, days_to_subtract):
@@ -57,7 +57,7 @@ for i in range(100):
     )
 
 max_num_of_days_old = 7
-for x in range(5000):
+for x in range(50):
     r = random.randint(0, len(stockList) - 1)
     s.add(generateStock(
         stockList[r]["ticker"], stockList[r]["name"], stockList[r]["sector"], random.randint(0, max_num_of_days_old))
