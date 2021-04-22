@@ -2,7 +2,7 @@ import menu from '../images/menu.png';
 import React from 'react';
 // import {ReactComponent as Menu} from '../images/menu.svg'
 
-function Navigationbar({setChart}) {
+function Navigationbar({sunGraph, bubbleGraph}) {
 
 
 
@@ -19,10 +19,10 @@ return (
             <div className="bottomside">
 
                 <label for="sunburst">Sunburst</label>
-                <input type="radio" value="sunburst" name="graphs" onClick={()=> setChart("Sunburst")} defaultChecked />
+                <input type="radio" value="sunburst" name="graphs" onClick={sunGraph} defaultChecked />
 
                 <label for="bubble">BubbleChart</label>
-                <input type="radio" value="bubble" name="graphs" onClick={()=> setChart("Bubblechart")} />
+                <input type="radio" value="bubble" name="graphs" onClick={bubbleGraph} />
 
                 <br />
 

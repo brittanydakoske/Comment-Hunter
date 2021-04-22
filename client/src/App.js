@@ -9,13 +9,15 @@ import {bubbleData} from  './components/data2';
 import './styles/App.css'; //styles/App.css ok
 import Navbar from "./components/Navbar";
 import Navigationbar from "./components/Navigationbar";
+import {SelectChart} from "./components/selectChart";
 
 const onSelect = (event) => {
-  console.log(event);
+  // console.log(event);
 };
 
 function App() {
-  const [chart, setChart] = useState( 'Sunburst' );
+  // const [chart, setChart] = useState( 'Sunburst' );
+  const {chart, sunGraph, bubbleGraph} = SelectChart();
   const [data, setData] = useState("just an example");
 
 
@@ -39,9 +41,8 @@ function App() {
     get1week().then( res => setData( res.data ) )
   },[]);
 
-  console.log(data)
 
-
+  //Joseph can adjust this to the name of the keys of the data
   var reDraw = bubbleData.map(v => ({
     v: v.values,
     k: v.keys
@@ -51,7 +52,7 @@ function App() {
   return (
       <div className="App">
         
-        <Navigationbar setChart={setChart}/>
+        <Navigationbar sunGraph={sunGraph} bubbleGraph={bubbleGraph}/>
         {/* <Navbar/> */}
         <div className="graph-container">
 
@@ -59,6 +60,9 @@ function App() {
           {/*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator*/}
           {/*You have to use ternary operator in this case tho, no if statements. */}
           {/*They just wont work, its a funky thing about JSX*/}
+
+          {console.log(data)}
+          {console.log(chart)}
 
           { chart === 'Sunburst' ?
               <Sunburst
