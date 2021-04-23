@@ -1,4 +1,4 @@
-import icon from './images/wsbet.jpg';
+import icon from '../images/wsbet.jpg';
 
 const cols = [
     {
@@ -21,10 +21,10 @@ const cols = [
 function Grid() {
 
 return (
+
     <div className="row">
-     
-     {
-        cols.map((prop) => (<div className="column"><img src={prop.image}></img><p>{prop.description}</p></div>))}
+    
+        {cols.map((prop) => (<div className="column"><img src={prop.image}></img><p>{prop.description}</p></div>))}
 
     </div>
   );
