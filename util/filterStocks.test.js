@@ -2,8 +2,8 @@ const {filterStocks} = require("./filterStocks");
 const { matchers } = require('jest-json-schema');
 expect.extend(matchers);
 
-const {testData_1, testData_2, testData_3, testData_4} = require("./testData");
-const testData = [testData_1, testData_2, testData_3, testData_4]
+const {testData_1, testData_2, testData_3} = require("./testData");
+const testData = [testData_1, testData_2, testData_3]
 
 const schema = {
     type: 'array',
@@ -17,4 +17,8 @@ const schema = {
     additionalProperties: false
 };
 
-testData.forEach( data => it('validates my json', () => {expect( filterStocks(data) ).toMatchSchema(schema)}))
+testData.forEach( data => it('validates my json', () => {
+    let sample = filterStocks(data)
+    expect( sample ).toMatchSchema(schema)
+    console.log( sample )
+}))
