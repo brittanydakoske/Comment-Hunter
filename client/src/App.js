@@ -23,7 +23,7 @@ const onSelect = (event) => {
 function App() {
   // const [chart, setChart] = useState( 'Sunburst' );
   const {chart, sunGraph, bubbleGraph} = SelectChart();
-  const {data, set1hr, set1day, set1week} = SelectTimeFrame();
+  const {data, set1hr, set1day, set1week, CallUseEffect} = SelectTimeFrame();
   // const [data, setData] = useState("just an example");
 
 
@@ -47,12 +47,20 @@ function App() {
   //   get1week().then( res => setData( res.data ) )
   // },[]);
 
+  CallUseEffect();
+
+  console.log(data);
 
   //Joseph can adjust this to the name of the keys of the data
-  var reDraw = bubbleData.map(v => ({
-    v: v.values,
-    k: v.keys
-  }));
+  var reDraw;
+
+  if(data != 0) {
+    reDraw = data.map(v => ({
+      v: v.values,
+      k: v.keys
+      // k: v.ticker
+    }));
+  }
 
 
   return (
@@ -73,8 +81,8 @@ function App() {
           {/*You have to use ternary operator in this case tho, no if statements. */}
           {/*They just wont work, its a funky thing about JSX*/}
 
-          {console.log(data)}
-          {console.log(chart)}
+          {/* {console.log(data)}
+          {console.log(chart)} */}
 
           { chart === 'Sunburst' ?
               <Sunburst
@@ -88,7 +96,9 @@ function App() {
                   width="580"
                   height="500"
               />
-              : <BubbleChart data={reDraw} useLabels />
+              : 
+              reDraw ? <BubbleChart data={reDraw} useLabels /> : "" 
+              
           }
         </div>
         
