@@ -24,7 +24,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img src={propic} alt="Img 2"></img>
+                    <img className="profile-pic" src={propic} alt="Img 2"></img>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -35,7 +35,18 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img src={propic} alt="Img 3"></img>
+                    <img className="profile-pic" src={propic} alt="Img 3"></img>
+
+                    <div className="description-title">
+                        <h3>Luis Rangel</h3>
+                        <p>Front-End Developer</p>
+                    </div>
+                    <p className="description-paragraph">Designed the interface of the application using React</p>
+                </div>
+            </li>
+            <li>
+                <div className="profile-pic" className="card">
+                    <img className="profile-pic" src={propic} alt="Img 4"></img>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -46,7 +57,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img src={propic} alt="Img 4"></img>
+                    <img className="profile-pic" src={propic} alt="Img 5"></img>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -57,7 +68,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img src={propic} alt="Img 5"></img>
+                    <img className="profile-pic" src={propic} alt="Img 6"></img>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -68,18 +79,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img src={propic} alt="Img 6"></img>
-
-                    <div className="description-title">
-                        <h3>Luis Rangel</h3>
-                        <p>Front-End Developer</p>
-                    </div>
-                    <p className="description-paragraph">Designed the interface of the application using React</p>
-                </div>
-            </li>
-            <li>
-                <div className="card">
-                    <img src={propic} alt="Img 7"></img>
+                    <img className="profile-pic" src={propic} alt="Img 7"></img>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>

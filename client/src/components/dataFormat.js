@@ -23,7 +23,7 @@
 const empty = "there is no data to display" ;
 const large = " the array size is too large";
 
-function dataFormat(input){
+export function dataFormat(input){
    if (!input){
        return null
    }
@@ -49,6 +49,8 @@ children[index].children.push({name: stock.name , size: stock.value})
 
 })
 doneFormat["children"]= children
+
+console.log(doneFormat)
 
 return doneFormat
 }

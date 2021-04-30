@@ -15,6 +15,7 @@ import Grid from "./components/Grid.js";
 import Section1 from "./components/Section1.js";
 import Section2 from "./components/Section2.js";
 import Slider from "./components/Slider.js";
+import {dataFormat} from "./components/dataFormat.js";
 
 const onSelect = (event) => {
   // console.log(event);
@@ -86,7 +87,8 @@ function App() {
 
           { chart === 'Sunburst' ?
               <Sunburst
-                  data={SunburstData}
+                  // data={SunburstData}
+                  data={dataFormat(data)}
                   onSelect={ onSelect }
                   scale="linear" // or exponential
                   tooltipContent={<div class="sunburstTooltip"  />} // eslint-disable-line
@@ -115,6 +117,10 @@ function App() {
         </div>
 
         <Slider />
+
+        <footer>
+          <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
+        </footer>
       </div>
   );
 }
