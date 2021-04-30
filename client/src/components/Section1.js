@@ -1,7 +1,6 @@
 import icon from '../images/wsbet.jpg';
 
 
-
 function Section1() {
 
   return (
