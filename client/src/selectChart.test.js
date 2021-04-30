@@ -34,15 +34,15 @@ describe("1 hr data", () => {
     it("Set data to reflect 1 hr worth of data", async () => {
         const {result} = renderHook(SelectTimeFrame)
 
-        await act(async () => {
-            result.current.set1hr()
-        })
-
         var dataString = JSON.stringify(get1hr().then( res => res.data));
 
-        console.log(dataString);
+        act( () => {
+            result.current.set1hr()
+        });
 
-        expect(result.current.data).toBe(dataString);
+        var dataString = JSON.stringify(set1hr);
+        
+        expect(JSON.stringify(result.current.data)).toBe(dataString);
     })
 })
 
