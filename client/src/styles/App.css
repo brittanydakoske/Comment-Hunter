@@ -2,6 +2,27 @@
   box-sizing: border-box;
 } 
 
+@font-face {
+  font-family: "Oswald"; /*Stick to name of folder you named*/
+  src: local("Oswald"), /*name of the folder*/
+  url("../fonts/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Girassol";
+  src: local("Girassol"),
+  url("../fonts/Girassol/Girassol-Regular.ttf") format("truetype");
+}
+
+.font-face-osw {
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+.font-face-gir {
+  font-family: "Girassol";
+}
+
 .App {
 
   margin: 0 auto;
@@ -11,17 +32,78 @@
   text-align: center; /*Comment this out later*/
 }
 
+.menu-icon {
+  margin: 0 auto;
+  /* position: none; */
+  width: 20px;
+  /* z-index: 8; */
+}
+
+.config-header {
+  position: fixed;
+  left: 70px;
+  top: 6px;
+}
+
+.bottomside {
+  position: fixed;
+  top: 95px;
+}
+
+.radio-select {
+  padding: 10px 30px;
+  width: 300px;
+}
+
+.radio {
+  float: right;
+  height: 15px;
+  width: 15px;
+}
+
+.config-label p {
+  text-align: left;
+  padding-left: 15px;
+}
+
 body {
   background-color: #1f1f1f;
   margin: auto;
 }
 
-h1, h2, p {
+p {
+  font-family: "Oswald";
+}
+
+h1 {
   color: white;
+  text-align: center; 
+}
+
+h2 {
+  color: white;
+  text-align: center; 
+}
+
+p {
+  color: white;
+  text-align: center; 
+  font-family: "Oswald";
+  font-size: 28px;
+}
+
+
+hr {
+  margin: 20px auto;
+  width: 80%;
 }
 
 img {
   width: 100%;
+}
+
+.imgSection {
+  /* width: 100%; */
 }
 
 .header-center {
@@ -31,26 +113,50 @@ img {
 .row {
   margin: 0 auto;
   max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .column {
-  float: left;
-  max-width: 33.33%;
+
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* float: left; */
+  max-width: 20%;
   padding: 10px 20px;
   color: white;
 }
 
-.row::after {
+/* .row::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
 
 .section {
   margin: 0 auto;
-  width: 100%;
-  display: table;
-  padding: 25px 0;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: left; */
+  /* display: table; */
+  /* padding: 25px 0; */
+}
+
+.item {
+  width: 20%;
+  padding: 30px 10px;
+  flex-grow: 1;
+}
+
+.item h2 {
+  text-align: left;
+}
+
+.text-sec {
+  /* width: 50%; */
+  flex-grow: 3;
 }
 
 .section p {
@@ -65,6 +171,11 @@ img {
 .section-right {
   float: right;
   max-width: 45%;
+}
+
+.about {
+  margin: 0 auto;
+  width: 80%;
 }
 
 .App-logo {
@@ -126,17 +237,21 @@ footer {
 
 .profile-pic {
   border-radius: 50%;
-  /* width: 200px; */
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
 }
 
-.description-title {
+.description-title, .description-title p {
   text-align: center;
   color: black;
-  padding: 10px 0;
+  padding: 0px 0;
 }
 
 .description-title h3 {
-  max-height: 10px;
+  max-height: 5px;
 }
 
 .description-paragraph {
@@ -238,6 +353,7 @@ text-align: center;
 
 .graph-container {
   background-color: white;
+  margin: 5px auto;
   /* width: 600px; */
   /* height: 1000px; */
   display: flex;
@@ -245,19 +361,21 @@ text-align: center;
 }
 
 .menu {
-  /* position: static; */
+  /* position: none; */
   width: 20px;
   /* padding: 0 15px; */
   margin: 32px 25px;
   cursor: pointer;
   visibility: visible;
-  z-index: 1;
+  z-index: 8;
   /* max-height: 15px; */
 }
 
 .navbar {
   display: flex; 
   flex-wrap: wrap; 
+  box-shadow:  0 0 20px black;
+  position: relative;
 }
 
 .navbar h1 {
@@ -269,19 +387,23 @@ text-align: center;
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   /* display: flex; */
   /* margin: 5px 0px; */
   /* padding: 5px 65px; */
-  height: 97vh;
+  height: 100%;
   width: 300px;
   background-color: black;
-  visibility: visible;
+  z-index: 7;
+  /* visibility: visible; */
 }
 
 .topside {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  position: fixed;
+  width: 300px;
+  height: 76px;
   background-color: #3040B8;
 }
 

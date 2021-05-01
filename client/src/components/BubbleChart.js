@@ -129,7 +129,11 @@ class BubbleChart extends React.Component {
 
     // render circle and text elements inside a group
     const texts = data.map((item, index) => {
+<<<<<<< HEAD
       var textLabel = item.k.toUpperCase();
+=======
+      var textLabel = item.k; //setting the up key name into a variable
+>>>>>>> ae81c3c0296ec4579e4927bc6301b274b851f0ae
       const props = this.props;
       const fontSize = this.radiusScale(item.v) / 2;
       return (
@@ -152,8 +156,9 @@ class BubbleChart extends React.Component {
             fontSize={`${fontSize}px`}
             fontWeight="bold"
           >
+            {/* {Here in the bottom textlabel is retrieving the name of key object into a bubble} */}
             {/* {item.v} */}
-            {textLabel}
+            {textLabel} 
           </text>
         </g>
       );
