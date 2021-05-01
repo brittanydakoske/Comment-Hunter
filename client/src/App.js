@@ -41,10 +41,10 @@ function App() {
 
   console.log(data)
 
-
-  var reDraw = bubbleData.map(v => ({
+  
+  var reDraw = data.map(v => ({
     v: v.values,
-    k: v.keys
+    k: v.ticker, 
   }));
 
 

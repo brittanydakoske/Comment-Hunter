@@ -6,7 +6,7 @@ class BubbleChart extends React.Component {
     data: [],
     useLabels: true,
     width: 600,
-    height: 400
+    height: 400,
   };
 
   constructor(props) {
@@ -56,7 +56,7 @@ class BubbleChart extends React.Component {
   radiusScale = (value) => {
     const fx = d3
       .scaleSqrt()
-      .range([1, 50])
+      .range([1, 100])
       .domain([this.minValue, this.maxValue]);
 
     return fx(value);
@@ -98,7 +98,7 @@ class BubbleChart extends React.Component {
       .scaleLinear()
       .domain([minValue, maxValue])
       .interpolate(d3.interpolateHcl)
-      .range(["#eb001b", "#f79e1b"]); //change colors inside the parameter of range referring to a color wheel
+      .range(["#67eff4", "#2b2dd4"]); //change colors inside the parameter of range referring to a color wheel
 
     // render simple circle element
     if (!this.props.useLabels) {
@@ -129,7 +129,7 @@ class BubbleChart extends React.Component {
 
     // render circle and text elements inside a group
     const texts = data.map((item, index) => {
-      var textLabel = item.k;
+      var textLabel = item.k.toUpperCase();
       const props = this.props;
       const fontSize = this.radiusScale(item.v) / 2;
       return (
