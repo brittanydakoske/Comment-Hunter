@@ -2,6 +2,27 @@
   box-sizing: border-box;
 } 
 
+@font-face {
+  font-family: "Oswald"; /*Stick to name of folder you named*/
+  src: local("Oswald"), /*name of the folder*/
+  url("../fonts/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Girassol";
+  src: local("Girassol"),
+  url("../fonts/Girassol/Girassol-Regular.ttf") format("truetype");
+}
+
+.font-face-osw {
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+.font-face-gir {
+  font-family: "Girassol";
+}
+
 .App {
 
   margin: 0 auto;
@@ -50,10 +71,27 @@ body {
   margin: auto;
 }
 
-h1, h2, p {
-  color: white;
-  text-align: center;
+p {
+  font-family: "Oswald";
 }
+
+h1 {
+  color: white;
+  text-align: center; 
+}
+
+h2 {
+  color: white;
+  text-align: center; 
+}
+
+p {
+  color: white;
+  text-align: center; 
+  font-family: "Oswald";
+  font-size: 28px;
+}
+
 
 hr {
   margin: 20px auto;
