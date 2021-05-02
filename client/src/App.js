@@ -50,13 +50,6 @@ function App() {
 
   CallUseEffect();
 
-<<<<<<< HEAD
-  
-  var reDraw = data.map(v => ({
-    v: v.values,
-    k: v.ticker, 
-  }));
-=======
   console.log(data);
 
   //Joseph can adjust this to the name of the keys of the data
@@ -65,11 +58,10 @@ function App() {
   if(data != 0) {
     reDraw = data.map(v => ({
       v: v.values,
-      k: v.keys
-      // k: v.ticker
+      // k: v.keys
+      k: v.ticker
     }));
   }
->>>>>>> ae81c3c0296ec4579e4927bc6301b274b851f0ae
 
 
   return (

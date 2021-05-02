@@ -3,6 +3,12 @@
 } 
 
 @font-face {
+  font-family: "Arvo";
+  src: local("Arvo"), 
+  url("../fonts/Arvo/Arvo-Regular.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Oswald"; /*Stick to name of folder you named*/
   src: local("Oswald"), /*name of the folder*/
   url("../fonts/Oswald/Oswald-VariableFont_wght.ttf") format("truetype");
@@ -12,6 +18,11 @@
   font-family: "Girassol";
   src: local("Girassol"),
   url("../fonts/Girassol/Girassol-Regular.ttf") format("truetype");
+}
+
+.font-face-arv {
+  font-family: "Arvo";
+  font-weight: 700;
 }
 
 .font-face-osw {
@@ -72,26 +83,27 @@ body {
 }
 
 p {
-  font-family: "Oswald";
+  font-family: "Arvo";
 }
 
 h1 {
   color: white;
-  text-align: center; 
+  text-align: center;
 }
 
 h2 {
   color: white;
   text-align: center; 
+  font-family: "Oswald";
+  font-size: 40px;
 }
 
 p {
   color: white;
   text-align: center; 
-  font-family: "Oswald";
+  font-family: "Arvo";
   font-size: 28px;
 }
-
 
 hr {
   margin: 20px auto;

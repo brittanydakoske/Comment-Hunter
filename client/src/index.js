@@ -6,6 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 import './fonts/Oswald/Oswald-VariableFont_wght.ttf';
 import './fonts/Girassol/Girassol-Regular.ttf';
+import './fonts/Arvo/Arvo-Regular.ttf';
 
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
