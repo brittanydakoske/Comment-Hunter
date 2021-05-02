@@ -1,4 +1,5 @@
 import icon from '../images/wsbet.jpg';
+import rdt from '../images/sec2scrape.jpg';
 
 
 
@@ -7,7 +8,7 @@ function Section2() {
   return (
       <div className="section">
         <div className="item img-sec">
-          <img className="imgSection" src={icon}></img>
+          <img className="imgSection" src={rdt}></img>
         </div>
         <div className="item text-sec">
           <h2>Visualizing and analyzing wall street bets</h2>

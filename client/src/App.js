@@ -85,7 +85,7 @@ function App() {
           {/* {console.log(data)}
           {console.log(chart)} */}
 
-          { chart === 'Sunburst' ?
+           { chart === 'Sunburst' ?
               <Sunburst
                   // data={SunburstData}
                   data={dataFormat(data)}
@@ -101,7 +101,7 @@ function App() {
               : 
               reDraw ? <BubbleChart data={reDraw} useLabels /> : "" 
               
-          }
+          } 
         </div>
         
         <hr></hr>
@@ -119,7 +119,7 @@ function App() {
         <Slider />
 
         <footer>
-          <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
+          <p>Copyright Â© 2021 Comment Hunter - All Rights Reserved.</p>
         </footer>
       </div>
   );

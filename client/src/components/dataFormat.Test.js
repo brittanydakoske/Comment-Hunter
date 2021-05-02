@@ -13,23 +13,24 @@ const filterStocks = ( stocks ) => {
     return set.sort( (a, b) => b.value - a.value)
 }
 const {filterStocks} = require("./filterStocks");
-const {testData_1, testData_2, testData_3, testData_4} = require("./testData");
+const {testData_1, testData_2, testData_3} = require("./testData");
 const { matchers } = require('jest-json-schema');
 expect.extend(matchers);
 
-const testData = [testData_1, testData_2, testData_3, testData_4]
+const testData = [testData_1, testData_2, testData_3]
 
 const schema = {
+    type :'object',
     properties: {
-        ticker: { type: 'string' },
         name: { type: 'string' },
-        sector: { type: 'string' },
-        value: { type: 'string' },
+        children:{ type: 'array' }
+     
     },
     required: ['ticker', 'name', 'sector', 'value'],
+    additionalProperties: false
 };
 
 testData.forEach( data => {
-    it('validates my json', () => { expect( filterStocks(data) ).toMatchSchema( schema ) })
+    it('jsonTest', () => { expect( filterStocks(data) ).toMatchSchema( schema ) })
 })
 module.exports = { filterStocks }
