@@ -50,13 +50,6 @@ function App() {
 
   CallUseEffect();
 
-<<<<<<< HEAD
-  
-  var reDraw = data.map(v => ({
-    v: v.values,
-    k: v.ticker, 
-  }));
-=======
   console.log(data);
 
   //Joseph can adjust this to the name of the keys of the data
@@ -65,11 +58,10 @@ function App() {
   if(data != 0) {
     reDraw = data.map(v => ({
       v: v.values,
-      k: v.keys
-      // k: v.ticker
+      // k: v.keys
+      k: v.ticker
     }));
   }
->>>>>>> ae81c3c0296ec4579e4927bc6301b274b851f0ae
 
 
   return (
@@ -93,7 +85,7 @@ function App() {
           {/* {console.log(data)}
           {console.log(chart)} */}
 
-          { chart === 'Sunburst' ?
+           { chart === 'Sunburst' ?
               <Sunburst
                   // data={SunburstData}
                   data={dataFormat(data)}
@@ -109,7 +101,7 @@ function App() {
               : 
               reDraw ? <BubbleChart data={reDraw} useLabels /> : "" 
               
-          }
+          } 
         </div>
         
         <hr></hr>
@@ -127,7 +119,7 @@ function App() {
         <Slider />
 
         <footer>
-          <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
+          <p>Copyright Â© 2021 Comment Hunter - All Rights Reserved.</p>
         </footer>
       </div>
   );

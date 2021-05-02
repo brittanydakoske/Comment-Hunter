@@ -1,19 +1,21 @@
 import icon from '../images/wsbet.jpg';
-
+import stock1 from '../images/stonks.jpg';
+import stock2 from '../images/stonks2.jpg';
+import crypto from '../images/crypto.jpg';
 const cols = [
     {
         id: 1,
-        image: icon,
+        image: stock1,
         description: 'blah blah blah'
     }, 
     {
         id: 2,
-        image: icon,
+        image: crypto,
         description: 'blah blah blah'
     },
     {
         id: 3,
-        image: icon,
+        image: stock2,
         description: 'blah blah blah'
     }
 ]

@@ -23,7 +23,7 @@
 const empty = "there is no data to display" ;
 const large = " the array size is too large";
 
-/*export*/ function dataFormat(input){
+export function dataFormat(input){
    if (!input){
        return null
    }
@@ -56,76 +56,76 @@ return doneFormat
 }
 
 
-const sampleData =
-   [
-       {
-           "ticker":"ETSY",
-           "name":"Etsy",
-           "sector":"Commercial Services",
-           "values":"321"
-       },
-       {
-           "ticker":"VZ",
-           "name":"Verizon",
-           "sector":"Communications",
-           "values":"124"
-       },
-       {
-           "ticker":"APPL",
-           "name":"Amazon",
-           "sector":"Electronic Technology",
-           "values":"25"
-       },
-       {
-           "ticker":"",
-           "name":"AT&T",
-           "sector":"Communications",
-           "values":"221"
-       },
-       {
-           "ticker":"GME",
-           "name":"GameStop",
-           "sector":"Retail",
-           "values":"420"
-       },
-       {
-           "ticker":"TSLA",
-           "name":"Tesla",
-           "sector":"Consumer Durables",
-           "values":"123"
-       },
-       {
-           "ticker":"MRNA",
-           "name":"Moderna",
-           "sector":"Health Technology",
-           "values":"154"
-       },
-       {
-           "ticker":"COKE",
-           "name":"Coca-Cola",
-           "sector":"Consumer non-durables",
-           "values":"231"
-       },
-       {
-           "ticker":"BAC",
-           "name":"Bank of America",
-           "sector":"Finance",
-           "values":"157"
-       },
-       {
-           "ticker":"FDX",
-           "name":"FedEx",
-           "sector":"Transportation",
-           "values":"207"
-       }
-   ]
-var testAr =  [
-    {
-        "ticker":"ETSY",
-        "name":"Etsy",
-        "sector":"Commercial Services",
-        "values":"321"
-    }]
+// const sampleData =
+//    [
+//        {
+//            "ticker":"ETSY",
+//            "name":"Etsy",
+//            "sector":"Commercial Services",
+//            "values":"321"
+//        },
+//        {
+//            "ticker":"VZ",
+//            "name":"Verizon",
+//            "sector":"Communications",
+//            "values":"124"
+//        },
+//        {
+//            "ticker":"APPL",
+//            "name":"Amazon",
+//            "sector":"Electronic Technology",
+//            "values":"25"
+//        },
+//        {
+//            "ticker":"",
+//            "name":"AT&T",
+//            "sector":"Communications",
+//            "values":"221"
+//        },
+//        {
+//            "ticker":"GME",
+//            "name":"GameStop",
+//            "sector":"Retail",
+//            "values":"420"
+//        },
+//        {
+//            "ticker":"TSLA",
+//            "name":"Tesla",
+//            "sector":"Consumer Durables",
+//            "values":"123"
+//        },
+//        {
+//            "ticker":"MRNA",
+//            "name":"Moderna",
+//            "sector":"Health Technology",
+//            "values":"154"
+//        },
+//        {
+//            "ticker":"COKE",
+//            "name":"Coca-Cola",
+//            "sector":"Consumer non-durables",
+//            "values":"231"
+//        },
+//        {
+//            "ticker":"BAC",
+//            "name":"Bank of America",
+//            "sector":"Finance",
+//            "values":"157"
+//        },
+//        {
+//            "ticker":"FDX",
+//            "name":"FedEx",
+//            "sector":"Transportation",
+//            "values":"207"
+//        }
+//    ]
+// var testAr =  [
+//     {
+//         "ticker":"ETSY",
+//         "name":"Etsy",
+//         "sector":"Commercial Services",
+//         "values":"321"
+//     }]
 
-    var formatEnd = dataFormat(sampleData);
-console.log(formatEnd)
+//     var formatEnd = dataFormat(sampleData);
+// console.log(formatEnd)
