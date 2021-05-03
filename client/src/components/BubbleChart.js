@@ -31,7 +31,7 @@ class BubbleChart extends React.Component {
 
   componentDidMount() {
 
-    console.log("The data is now: " + this.state.data);
+    // console.log("The data is now: " + this.state.data);
     if (this.props.data.length > 0) {
       this.minValue =
         0.95 *

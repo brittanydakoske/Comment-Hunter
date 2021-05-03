@@ -12,12 +12,12 @@ const changeVisibility = () => {
         setVisible(true);
         setVisibleStyle({visibility: "visible"});
         setMenuStyle({position: "fixed"});
-        console.log(visible);
+        // console.log(visible);
     } else {
         setVisible(false);
         setVisibleStyle({visibility: "hidden"});
         setMenuStyle({position: "static"});
-        console.log(visible);
+        // console.log(visible);
     }
 }
 
@@ -28,7 +28,7 @@ return (
             <img alt={""} className="menu-icon" style={menuStyle} src={menu} onClick={changeVisibility}/>
         </div>
         <h1 className="item-2 font-face-arv">Comment Hunter</h1>
-        <div className="menu item-1"/>
+        <div className="menu item-1"></div>
         <div className="sidebar" style={visibleStyle}>
             <div className="topside">
                 <h2 className="config-header">Configurations</h2>

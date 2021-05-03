@@ -27,7 +27,7 @@ children[index].children.push({name: stock.name , size: stock.values})
 })
 doneFormat["children"]= children
 
-console.log(doneFormat);
+//console.log(doneFormat);
 return doneFormat
 }
 

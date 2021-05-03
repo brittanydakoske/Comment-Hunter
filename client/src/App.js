@@ -12,8 +12,8 @@ import Slider from "./components/Slider.js";
 import {dataFormat} from "./components/dataFormat.js";
 
 const onSelect = (event) => {
-  console.log("SUNBURST_TEST");
-  console.log(event);
+  // console.log("SUNBURST_TEST");
+  // console.log(event);
 };
 
 function App() {
