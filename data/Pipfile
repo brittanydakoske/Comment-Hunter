@@ -8,7 +8,6 @@ praw = "*"
 sqlalchemy = "*"
 psycopg2 = "*"
 python-decouple = "*"
-random-word = "*"
 pyyaml = "*"
 
 [dev-packages]
