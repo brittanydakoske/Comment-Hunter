@@ -1,8 +1,5 @@
-import icon from '../images/cog.jpg';
 import propic from '../images/luis.JPG';
 import React from 'react';
-//import $ from 'jquery';
-
 
 function Slider() {
 
@@ -45,7 +42,7 @@ function Slider() {
                 </div>
             </li>
             <li>
-                <div className="profile-pic" className="card">
+                <div className="card">
                     <img className="profile-pic" src={propic} alt="Img 4"></img>
 
                     <div className="description-title">
