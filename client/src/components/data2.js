@@ -1,0 +1,15 @@
+export const bubbleData = [
+    {"keys":"aac","values":20},
+    {"keys":"adx","values":25},
+    {"keys":"adc","values":30},
+    {"keys":"abg","values":35},
+    {"keys":"abm","values":40},
+    {"keys":"bas","values":45},
+    {"keys":"acm","values":50},
+    {"keys":"acp","values":55},
+    {"keys":"acg","values":60},
+    {"keys":"ahs","values":65},
+    {"keys":"afg","values":70},
+    {"keys":"aer","values":75},
+    {"keys":"aui","values":80},
+];
