@@ -47,7 +47,7 @@ function App() {
                   data={dataFormat(data)}
                   onSelect={ onSelect }
                   scale="linear" // or exponential
-                  tooltipContent={<div class="sunburstTooltip"  />} // eslint-disable-line
+                  tooltipContent={<div className="sunburstTooltip"  />} // eslint-disable-line
                   tooltip
                   tooltipPosition="right"
                   keyId="anagraph"

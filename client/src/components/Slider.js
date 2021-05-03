@@ -4,13 +4,13 @@ import React from 'react';
 function Slider() {
 
   return (
-    <div class="slide hi-slide">
-        <div className="hi-prev"></div>
-        <div className="hi-next"></div>
+    <div className="slide hi-slide">
+        <div className="hi-prev"/>
+        <div className="hi-next"/>
         <ul className="team-container">
             <li>
                 <div className="card">
-                    <img className="profile-pic" src={propic} alt="Img 1"></img>
+                    <img className="profile-pic" src={propic} alt="Img 1"/>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -21,7 +21,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img className="profile-pic" src={propic} alt="Img 2"></img>
+                    <img className="profile-pic" src={propic} alt="Img 2"/>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -32,7 +32,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img className="profile-pic" src={propic} alt="Img 3"></img>
+                    <img className="profile-pic" src={propic} alt="Img 3"/>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -43,7 +43,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img className="profile-pic" src={propic} alt="Img 4"></img>
+                    <img className="profile-pic" src={propic} alt="Img 4"/>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -54,7 +54,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img className="profile-pic" src={propic} alt="Img 5"></img>
+                    <img className="profile-pic" src={propic} alt="Img 5"/>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -65,7 +65,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img className="profile-pic" src={propic} alt="Img 6"></img>
+                    <img className="profile-pic" src={propic} alt="Img 6"/>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
@@ -76,7 +76,7 @@ function Slider() {
             </li>
             <li>
                 <div className="card">
-                    <img className="profile-pic" src={propic} alt="Img 7"></img>
+                    <img className="profile-pic" src={propic} alt="Img 7"/>
 
                     <div className="description-title">
                         <h3>Luis Rangel</h3>
