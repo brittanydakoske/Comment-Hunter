@@ -1,89 +1,38 @@
-const sampleData =
-    [
-        {
-            "ticker":"ETSY",
-            "name":"Etsy",
-            "sector":"Commercial Services",
-            "values":"321"
-        },
-        {
-            "ticker":"VZ",
-            "name":"Verizon",
-            "sector":"Communications",
-            "values":"124"
-        },
-        {
-            "ticker":"APPL",
-            "name":"Amazon",
-            "sector":"Electronic Technology",
-            "values":"25"
-        },
-        {
-            "ticker":"",
-            "name":"AT&T",
-            "sector":"Communications",
-            "values":"221"
-        },
-        {
-            "ticker":"GME",
-            "name":"GameStop",
-            "sector":"Retail",
-            "values":"420"
-        },
-        {
-            "ticker":"TSLA",
-            "name":"Tesla",
-            "sector":"Consumer Durables",
-            "values":"123"
-        },
-        {
-            "ticker":"MRNA",
-            "name":"Moderna",
-            "sector":"Health Technology",
-            "values":"154"
-        },
-        {
-            "ticker":"COKE",
-            "name":"Coca-Cola",
-            "sector":"Consumer non-durables",
-            "values":"231"
-        },
-        {
-            "ticker":"BAC",
-            "name":"Bank of America",
-            "sector":"Finance",
-            "values":"157"
-        },
-        {
-            "ticker":"FDX",
-            "name":"FedEx",
-            "sector":"Transportation",
-            "values":"207"
-        }
-    ]
+const {getStocksByHour} = require("../util/getStocksByHour");
+const {filterStocks} = require("../util/filterStocks");
+
 
 const get1h = async (req, res) => {
     try {
-        return res.status(200).json(sampleData);
-    } catch (e) {
-        return res.status(500)
+        return getStocksByHour( 1 )
+            .then( stocks => res.status( 200 ).json( filterStocks( stocks ).slice(0, 10) ))
+    } catch ( e ) {
+        return res.status( 500 )
     }
 }
 
 const get1d = async (req, res) => {
     try {
-        return res.status(200).json(sampleData);
-    } catch (e) {
-        return res.status(500)
+        return getStocksByHour( 25 )
+            .then( stocks => res.status( 200 ).json( filterStocks( stocks ).slice(0, 10) ))
+    } catch ( e ) {
+        return res.status( 500 )
     }
 }
 
 const get1w = async (req, res) => {
     try {
-        return res.status(200).json(sampleData);
-    } catch (e) {
-        return res.status(500)
+        return getStocksByHour( 169 )
+            .then( stocks => res.status( 200 ).json( filterStocks( stocks ).slice(0, 10) ))
+    } catch ( e ) {
+        return res.status( 500 )
     }
 }
 
-module.exports = { get1h, get1d, get1w }
+module.exports =
+    {
+        get1h,
+        get1d,
+        get1w,
+    }
+
