@@ -15,10 +15,11 @@ import Grid from "./components/Grid.js";
 import Section1 from "./components/Section1.js";
 import Section2 from "./components/Section2.js";
 import Slider from "./components/Slider.js";
-import {dataFormat} from "./components/dataFormat.js";
+import {dataFormat, sampleData} from "./components/dataFormat.js";
 
 const onSelect = (event) => {
-  // console.log(event);
+  console.log("SUNBURST_TEST");
+  console.log(event);
 };
 
 function App() {
@@ -50,7 +51,7 @@ function App() {
 
   CallUseEffect();
 
-  console.log(data);
+ 
 
   //Joseph can adjust this to the name of the keys of the data
   var reDraw;
@@ -62,8 +63,6 @@ function App() {
       k: v.ticker
     }));
   }
-
-
   return (
       <div className="App">
         
@@ -85,9 +84,9 @@ function App() {
           {/* {console.log(data)}
           {console.log(chart)} */}
 
-           { chart === 'Sunburst' ?
+           { chart === 'Sunburst' ?          
               <Sunburst
-                  // data={SunburstData}
+                   //data={SunburstData}
                   data={dataFormat(data)}
                   onSelect={ onSelect }
                   scale="linear" // or exponential
@@ -96,11 +95,11 @@ function App() {
                   tooltipPosition="right"
                   keyId="anagraph"
                   width="580"
-                  height="500"
-              />
+                  height="500"            
+              />          
               : 
               reDraw ? <BubbleChart data={reDraw} useLabels /> : "" 
-              
+             
           } 
         </div>
         
