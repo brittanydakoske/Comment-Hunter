@@ -24,7 +24,7 @@ function App() {
 
   var reDraw;
 
-  if(data != 0) {
+  if(data !== 0) {
     reDraw = data.map(v => ({
       v: v.values,
       k: v.ticker

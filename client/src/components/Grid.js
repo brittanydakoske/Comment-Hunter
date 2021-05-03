@@ -1,4 +1,3 @@
-import icon from '../images/wsbet.jpg';
 import stock1 from '../images/stonks.jpg';
 import stock2 from '../images/stonks2.jpg';
 import crypto from '../images/crypto.jpg';
@@ -26,7 +25,7 @@ return (
 
     <div className="row">
     
-        {cols.map((prop) => (<div className="column"><img src={prop.image}></img><p>{prop.description}</p></div>))}
+        {cols.map((prop) => (<div className="column"><img src={prop.image} alt={''}></img><p>{prop.description}</p></div>))}
 
     </div>
   );
