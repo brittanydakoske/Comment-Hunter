@@ -25,10 +25,10 @@ return (
     <div className="navbar">
         
         <div className="menu item-1">
-            <img alt={""} className="menu-icon" style={menuStyle} src={menu} onClick={changeVisibility}></img>
+            <img alt={""} className="menu-icon" style={menuStyle} src={menu} onClick={changeVisibility}/>
         </div>
         <h1 className="item-2 font-face-arv">Comment Hunter</h1>
-        <div className="menu item-1"></div>
+        <div className="menu item-1"/>
         <div className="sidebar" style={visibleStyle}>
             <div className="topside">
                 <h2 className="config-header">Configurations</h2>
@@ -40,12 +40,12 @@ return (
                 </div>
 
                 <div className="radio-select">
-                    <label for="sunburst">Sunburst</label>
+                    <label>Sunburst</label>
                     <input className="radio" type="radio" value="sunburst" name="graphs" onClick={sunGraph} defaultChecked />
                 </div>
 
                 <div className="radio-select">
-                    <label for="bubble">BubbleChart</label>
+                    <label>BubbleChart</label>
                     <input className="radio" type="radio" value="bubble" name="graphs" onClick={bubbleGraph} />
                 </div>
 
@@ -56,17 +56,17 @@ return (
                 </div>
 
                 <div className="radio-select">
-                    <label for="1hr">1 hr</label>
+                    <label>1 hr</label>
                     <input className="radio" type="radio" value="1hr" name="time" onClick={set1hr} />
                 </div>
 
                 <div className="radio-select">
-                    <label for="sunburst">24 hrs</label>
+                    <label>24 hrs</label>
                     <input className="radio" type="radio" value="24hrs" name="time" onClick={set1day}/>
                 </div>
 
                 <div className="radio-select">
-                    <label for="sunburst">1 week</label>
+                    <label>1 week</label>
                     <input className="radio" type="radio" value="1week" name="time" onClick={set1week} defaultChecked/>
                 </div>   
  
