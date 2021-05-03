@@ -24,8 +24,9 @@ function Grid() {
 return (
 
     <div className="row">
-    
-        {cols.map((prop) => (<div className="column"><img src={prop.image} alt={''}></img><p>{prop.description}</p></div>))}
+
+        {/*Warning: Each child in a list should have a unique "key" prop.*/}
+        {cols.map((prop, i) => (<div className="column" key={i}><img src={prop.image} alt={''}/><p>{prop.description}</p></div>))}
 
     </div>
   );
