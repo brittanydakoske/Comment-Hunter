@@ -22,7 +22,7 @@ sectors.forEach(sector => {
 });
 input.forEach(stock=>{ 
 let index = children.findIndex(s => s.name === stock.sector)
-children[index].children.push({name: stock.name , size: stock.values})
+children[index].children.push({name: stock.name , size: stock.value})
 
 })
 doneFormat["children"]= children
