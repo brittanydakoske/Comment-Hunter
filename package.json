@@ -7,7 +7,8 @@
     "nodemon": "nodemon ./bin/www",
     "seed": "sequelize db:seed:all",
     "migrate": "sequelize db:migrate",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd ClientApp && npm install && npm run build",
+    "test": "jest"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
