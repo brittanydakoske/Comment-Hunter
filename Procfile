@@ -1,3 +1,2 @@
 web: npm start
-worker: cd data && python scraper.python
-worker: cd data && python pruner.py
+worker: cd data && python scraper.py
