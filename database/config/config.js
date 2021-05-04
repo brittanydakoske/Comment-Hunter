@@ -16,7 +16,7 @@ module.exports = {
         },
     },
     production: {
-        url: process.env.DATABASE_URI,
+        url: process.env.DATABASE_URL.replace("://", "ql://", 1),
         dialect: 'postgres',
         "dialectOptions": {
             "ssl": { "rejectUnauthorized": false }
