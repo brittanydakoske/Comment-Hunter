@@ -26,7 +26,7 @@ reddit = praw.Reddit(
 subreddit = reddit.subreddit("wallstreetbets")
 
 # Parse XML File
-tree = ET.parse("StockInfo.xml")
+tree = ET.parse("StockListComplete.xml")
 root = tree.getroot()
 
 Base = declarative_base()
