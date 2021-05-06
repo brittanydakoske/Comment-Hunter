@@ -29,7 +29,7 @@ reddit = praw.Reddit(
 subreddit = reddit.subreddit("wallstreetbets")
 
 # Parse XML File
-tree = ET.parse("StockListIncomplete.xml")
+tree = ET.parse("StockListComplete.xml")
 root = tree.getroot()
 
 Base = declarative_base()
@@ -38,7 +38,7 @@ s = Session()
 
 for comment in subreddit.stream.comments(skip_existing=True):
 
-    cut_off = datetime.now() - timedelta(hours=1)
+    cut_off = datetime.now() - timedelta(hours=168)
     s.execute(delete(Stock).where(Stock.date < cut_off))
 
     print(comment.body + "\n")
