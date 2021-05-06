@@ -1,11 +1,14 @@
 # scraper.py #
 
 import praw
-from datetime import datetime
+
 from sqlalchemy.orm import declarative_base
 from crud import recreate_database, Session
-from models import Stock
 import xml.etree.ElementTree as ET
+from models import Stock
+from sqlalchemy import delete
+from datetime import datetime, timedelta
+
 
 def generateStock(ticker, name, sector):
     return Stock(
@@ -30,10 +33,14 @@ tree = ET.parse("StockListIncomplete.xml")
 root = tree.getroot()
 
 Base = declarative_base()
-recreate_database()  # Testing
+#recreate_database()  # Testing
 s = Session()
 
 for comment in subreddit.stream.comments(skip_existing=True):
+
+    cut_off = datetime.now() - timedelta(hours=1)
+    s.execute(delete(Stock).where(Stock.date < cut_off))
+
     print(comment.body + "\n")
     records = root.findall('record')
     if len(records) > 0:
@@ -60,5 +67,6 @@ for comment in subreddit.stream.comments(skip_existing=True):
                 # insert
                 new_stock = generateStock(ticker, fullname, sector)
                 s.add(new_stock)
-                s.commit()
+
+    s.commit()
 s.close()
