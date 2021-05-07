@@ -33,7 +33,7 @@ return (
         <div className="menu item-1">
             <img className="menu-icon" style={menuStyle} src={menu} onClick={changeVisibility}></img>
         </div>
-        <h1 className="item-2 font-face-arv">Comment Hunter</h1>
+        <h1 className="item-2 font-face-Cin">Comment Hunter</h1>
         <div className="menu item-1"></div>
         <div className="sidebar" style={visibleStyle}>
             <div className="topside">

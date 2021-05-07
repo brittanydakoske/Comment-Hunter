@@ -19,6 +19,11 @@
   src: local("Girassol"),
   url("../fonts/Girassol/Girassol-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Cinzel";
+  src: local("Cinzel"), 
+  url("../fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
+}
 
 .font-face-arv {
   font-family: "Arvo";
@@ -32,6 +37,10 @@
 
 .font-face-gir {
   font-family: "Girassol";
+}
+.font-face-Cin {
+  font-family: "Cinzel";
+  font-weight: 600;
 }
 
 .App {
