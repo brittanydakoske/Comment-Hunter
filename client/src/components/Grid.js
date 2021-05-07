@@ -6,17 +6,17 @@ const cols = [
     {
         id: 1,
         image: stock1,
-        description: 'blah blah blah'
+        description: 'Extraction'
     }, 
     {
         id: 2,
         image: crypto,
-        description: 'blah blah blah'
+        description: 'Analyzation'
     },
     {
         id: 3,
         image: stock2,
-        description: 'blah blah blah'
+        description: 'Presentation'
     }
 ]
 

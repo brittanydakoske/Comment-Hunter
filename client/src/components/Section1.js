@@ -7,8 +7,8 @@ function Section1() {
   return (
       <div className="section">
         <div className="item text-sec">
-          <h2>A data scraper that presents data efficiently</h2>
-          <p>Comment Hunter was designed with the purpose of allowing users to track mentions of certain keywords from any particular sub Reddit. Therefore, the application is developed to retireve information and present the data broken down into a graph that users will be able to understand and analyze.</p>
+          <h2>Data Extraction with Intelligent Visualization</h2>
+          <p>Comment Hunter was designed to search subreddits for mentions of keywords and then present its findings in a sleek, easily comprehensible presentation. Users can choose between three different timeframes for the search window and select the graph style that best expresses the data.</p>
         </div>
         <div className="item img-sec">
           <img className="imgSection" src={users}></img>

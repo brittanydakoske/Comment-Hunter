@@ -104,7 +104,7 @@ function App() {
         </div>
         
         <hr></hr>
-        <h2>Analyzing data efficiently</h2>
+        <h2>Analyzing Data Efficiently</h2>
         <Grid />
         <Section1 />
         <Section2 />
@@ -112,7 +112,7 @@ function App() {
         <hr></hr>
         <div className="about">
           <h2>Team Members</h2>
-          <p>Comment hunter is a collaborative project created by CSUN Computer Science students. The project involved several parts which required seperate work to be split among a group. The following slider shows each team member that worked within this project along with different roles that every member contributed seperately. </p>
+          <p>Comment Hunter is a collaborative project created by a group of Computer Science students at the California State University at Northridge. Below is a list of team members along with their individual responsibilities and contributions to the project.</p>
         </div>
 
         <Slider />
