@@ -39,8 +39,8 @@ function App() {
           sunGraph={sunGraph} 
           bubbleGraph={bubbleGraph}
           set1hr = {set1hr}
-          set1day = {set12hr}
-          set1week = {set24hr}
+          set12hr = {set12hr}
+          set24hr = {set24hr}
         />
         {/* <Navbar/> */}
         <div className="graph-container">
@@ -50,7 +50,7 @@ function App() {
                   data={dataFormat(data)}
                   onSelect={ onSelect }
                   scale="linear"
-                  tooltipContent={<div class="sunburstTooltip"  />}
+                  tooltipContent={<div className="sunburstTooltip"  />}
                   tooltip
                   tooltipPosition="right"
                   keyId="anagraph"
