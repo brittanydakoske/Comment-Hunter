@@ -8,7 +8,7 @@ import './fonts/Oswald/Oswald-VariableFont_wght.ttf';
 import './fonts/Girassol/Girassol-Regular.ttf';
 import './fonts/Arvo/Arvo-Regular.ttf';
 import './fonts/Cinzel/Cinzel-VariableFont_wght.ttf';
-
+import './fonts/OpenSans/OpenSans-Light.ttf';
 
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 const rootElement = document.getElementById('root');

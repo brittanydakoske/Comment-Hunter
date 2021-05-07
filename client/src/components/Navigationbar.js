@@ -38,7 +38,7 @@ return (
         <div className="sidebar" style={visibleStyle}>
             <div className="topside">
                 {/* <img className="menu item-1" src={menu} onClick={}></img> */}
-                <h2 className="config-header">Configurations</h2>
+                <h4 className="config-header">Configurations</h4>
             </div>
             <div className="bottomside">
 
