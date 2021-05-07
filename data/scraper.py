@@ -1,7 +1,7 @@
 # scraper.py #
 
 import praw
-
+import signal
 from sqlalchemy.orm import declarative_base
 from crud import recreate_database, Session
 import xml.etree.ElementTree as ET
