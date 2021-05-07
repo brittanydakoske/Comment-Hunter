@@ -11,18 +11,18 @@ const get1h = async (req, res) => {
     }
 }
 
-const get1d = async (req, res) => {
+const get12h = async (req, res) => {
     try {
-        return getStocksByHour( 25 )
+        return getStocksByHour( 13 )
             .then( stocks => res.status( 200 ).json( filterStocks( stocks ).slice(0, 10) ))
     } catch ( e ) {
         return res.status( 500 )
     }
 }
 
-const get1w = async (req, res) => {
+const get24h = async (req, res) => {
     try {
-        return getStocksByHour( 169 )
+        return getStocksByHour( 25 )
             .then( stocks => res.status( 200 ).json( filterStocks( stocks ).slice(0, 10) ))
     } catch ( e ) {
         return res.status( 500 )
@@ -32,7 +32,7 @@ const get1w = async (req, res) => {
 module.exports =
     {
         get1h,
-        get1d,
-        get1w,
+        get12h,
+        get24h,
     }
 

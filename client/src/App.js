@@ -11,14 +11,9 @@ import Section2 from "./components/Section2.js";
 import Slider from "./components/Slider.js";
 import {dataFormat} from "./components/dataFormat.js";
 
-const onSelect = (event) => {
-  // console.log("SUNBURST_TEST");
-  // console.log(event);
-};
-
 function App() {
   const {chart, sunGraph, bubbleGraph} = SelectChart();
-  const {data, set1hr, set1day, set1week, CallUseEffect} = SelectTimeFrame();
+  const {data, set1hr, set12hr, set24hr, CallUseEffect} = SelectTimeFrame();
 
   CallUseEffect();
 
@@ -37,15 +32,14 @@ function App() {
           sunGraph={sunGraph} 
           bubbleGraph={bubbleGraph}
           set1hr = {set1hr}
-          set1day = {set1day}
-          set1week = {set1week} 
+          set12hr = {set12hr}
+          set24hr = {set24hr}
         />
         {/* <Navbar/> */}
         <div className="graph-container">
            { chart === 'Sunburst' ?          
               <Sunburst
                   data={dataFormat(data)}
-                  onSelect={ onSelect }
                   scale="linear" // or exponential
                   tooltipContent={<div className="sunburstTooltip"  />} // eslint-disable-line
                   tooltip
@@ -73,7 +67,7 @@ function App() {
         <Slider />
 
         <footer>
-          <p>Copyright Â© 2021 Comment Hunter - All Rights Reserved.</p>
+          <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
         </footer>
       </div>
   );
