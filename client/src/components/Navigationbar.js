@@ -1,7 +1,7 @@
 import menu from '../images/menu.png';
 import React, { useState } from 'react';
 
-function Navigationbar({sunGraph, bubbleGraph, set1hr, set1day, set1week}) {
+function Navigationbar({sunGraph, bubbleGraph, set1hr, set12hr, set24hr}) {
 
 const [visible, setVisible] = useState(false);
 const [visibleStyle, setVisibleStyle] = useState({visibility: "hidden"});
@@ -61,13 +61,13 @@ return (
                 </div>
 
                 <div className="radio-select">
-                    <label for="sunburst">24 hrs</label>
-                    <input className="radio" type="radio" value="24hrs" name="time" onClick={set1day}/>
+                    <label for="sunburst">12 hrs</label>
+                    <input className="radio" type="radio" value="12hr" name="time" onClick={set12hr}/>
                 </div>
 
                 <div className="radio-select">
-                    <label for="sunburst">1 week</label>
-                    <input className="radio" type="radio" value="1week" name="time" onClick={set1week} defaultChecked/>
+                    <label for="sunburst">24 hrs</label>
+                    <input className="radio" type="radio" value="24h" name="time" onClick={set24hr} defaultChecked/>
                 </div>   
  
             </div>

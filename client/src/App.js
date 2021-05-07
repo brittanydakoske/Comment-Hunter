@@ -18,7 +18,7 @@ const onSelect = (event) => {
 
 function App() {
   const {chart, sunGraph, bubbleGraph} = SelectChart();
-  const {data, set1hr, set1day, set1week, CallUseEffect} = SelectTimeFrame();
+  const {data, set1hr, set12hr, set24hr, CallUseEffect} = SelectTimeFrame();
 
   CallUseEffect();
 
@@ -39,8 +39,8 @@ function App() {
           sunGraph={sunGraph} 
           bubbleGraph={bubbleGraph}
           set1hr = {set1hr}
-          set1day = {set1day}
-          set1week = {set1week} 
+          set1day = {set12hr}
+          set1week = {set24hr}
         />
         {/* <Navbar/> */}
         <div className="graph-container">
