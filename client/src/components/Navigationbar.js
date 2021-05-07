@@ -1,8 +1,5 @@
 import menu from '../images/menu.png';
-import React, { useCallback, useState } from 'react';
-import { Hidden } from '@material-ui/core';
-import { style } from 'd3-selection';
-// import {ReactComponent as Menu} from '../images/menu.svg'
+import React, { useState } from 'react';
 
 function Navigationbar({sunGraph, bubbleGraph, set1hr, set1day, set1week}) {
 
@@ -24,9 +21,6 @@ const changeVisibility = () => {
     }
 }
 
-// var visibleStyle = { visibility: "hidden" }; 
-// if (!visible) style.visibility = "visible";
-
 return (
     <div className="navbar">
         
@@ -37,7 +31,6 @@ return (
         <div className="menu item-1"></div>
         <div className="sidebar" style={visibleStyle}>
             <div className="topside">
-                {/* <img className="menu item-1" src={menu} onClick={}></img> */}
                 <h4 className="config-header">Configurations</h4>
             </div>
             <div className="bottomside">
@@ -79,12 +72,6 @@ return (
  
             </div>
         </div>
-        
-        {/* <div className="menu">
-            
-        </div> */}
-        
-        
 
     </div>
   );
