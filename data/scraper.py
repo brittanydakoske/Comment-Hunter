@@ -60,7 +60,7 @@ def run():
     for comment in comment_stream:
 
         if(program_flag == False):
-            commment_stream.close()
+            comment_stream.close()
             #s.close()
 
         cut_off = datetime.now() - timedelta(hours=24)
