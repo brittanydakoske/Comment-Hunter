@@ -22,6 +22,9 @@ def generateStock(ticker, name, sector):
 program_flag = False
 
 def run():
+
+    start_time = datetime.now()
+
     # turn on the program flag
     global program_flag
     program_flag = True
@@ -52,7 +55,13 @@ def run():
     # recreate_database()  # Testing
     s = Session()
 
-    for comment in subreddit.stream.comments(skip_existing=True):
+    comment_stream = subreddit.stream.comments(skip_existing = True)
+
+    for comment in comment_stream:
+
+        if(program_flag = False):
+            commment_stream.close()
+            #s.close()
 
         cut_off = datetime.now() - timedelta(hours=24)
         s.execute(delete(Stock).where(Stock.date < cut_off))
@@ -81,6 +90,11 @@ def run():
 
         s.commit()
     s.close()
+
+    end_time = datetime.now()
+
+    print('Started: ', start_time)
+    print('Ended: ', end_time)
 
 if __name__ == '__main__':
     run()
