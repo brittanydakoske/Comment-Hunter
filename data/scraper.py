@@ -20,11 +20,11 @@ def generateStock(ticker, name, sector):
 
 # Create Reddit Instance
 reddit = praw.Reddit(
-    user_agent="Comment Extraction (by u/comment-hunter)",
-    client_id="aPchqxNlshTm4Q",
-    client_secret="4FQsfVHmzXGhVj4woZ6y1BlzMrcJjg",
-    username="comment-hunter",
-    password="Comp380_2021",
+    user_agent=config('REDDIT_USER_AGENT'),
+    client_id=config('REDDIT_CLIENT_ID'),
+    client_secret=config('REDDIT_SECRET'),
+    username=config('REDDIT_USERNAME'),
+    password=config('REDDIT_PASSWORD'),
 )
 subreddit = reddit.subreddit("wallstreetbets")
 
@@ -33,12 +33,12 @@ tree = ET.parse("StockListComplete.xml")
 root = tree.getroot()
 
 Base = declarative_base()
-#recreate_database()  # Testing
+recreate_database()  # Testing
 s = Session()
 
 for comment in subreddit.stream.comments(skip_existing=True):
 
-    cut_off = datetime.now() - timedelta(hours=168)
+    cut_off = datetime.now() - timedelta(hours=24)
     s.execute(delete(Stock).where(Stock.date < cut_off))
 
     print(comment.body + "\n")
@@ -61,10 +61,6 @@ for comment in subreddit.stream.comments(skip_existing=True):
             else:
                 sector = ''
             if (ticker != '' and ticker in comment.body.split()) or (fullname != '' and fullname in comment.body):
-                # print(comment.body)
-                # print(ticker, fullname, sector)
-                # print("\n\n\n")
-                # insert
                 new_stock = generateStock(ticker, fullname, sector)
                 s.add(new_stock)
 
