@@ -33,7 +33,7 @@ tree = ET.parse("StockListComplete.xml")
 root = tree.getroot()
 
 Base = declarative_base()
-recreate_database()  # Testing
+# recreate_database()  # Testing
 s = Session()
 
 for comment in subreddit.stream.comments(skip_existing=True):
