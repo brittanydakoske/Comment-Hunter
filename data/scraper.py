@@ -59,7 +59,7 @@ def run():
 
     for comment in comment_stream:
 
-        if(program_flag = False):
+        if(program_flag == False):
             commment_stream.close()
             #s.close()
 
