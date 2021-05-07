@@ -42,7 +42,6 @@ for comment in subreddit.stream.comments(skip_existing=True):
     cut_off = datetime.now() - timedelta(hours=24)
     s.execute(delete(Stock).where(Stock.date < cut_off))
 
-    print(comment.body + "\n")
     records = root.findall('record')
     if len(records) > 0:
         for record in root.findall('record'):
