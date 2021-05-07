@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 from models import Stock
 from sqlalchemy import delete
 from datetime import datetime, timedelta
+from decouple import config
 
 
 def generateStock(ticker, name, sector):
