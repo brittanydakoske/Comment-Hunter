@@ -1,7 +1,10 @@
 import menu from '../images/menu.png';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import { Hidden } from '@material-ui/core';
+import { style } from 'd3-selection';
+// import {ReactComponent as Menu} from '../images/menu.svg'
 
-function Navigationbar({sunGraph, bubbleGraph, set1hr, set12hr, set24hr}) {
+function Navigationbar({sunGraph, bubbleGraph, set1hr, set1day, set1week}) {
 
 const [visible, setVisible] = useState(false);
 const [visibleStyle, setVisibleStyle] = useState({visibility: "hidden"});
@@ -12,24 +15,30 @@ const changeVisibility = () => {
         setVisible(true);
         setVisibleStyle({visibility: "visible"});
         setMenuStyle({position: "fixed"});
+        console.log(visible);
     } else {
         setVisible(false);
         setVisibleStyle({visibility: "hidden"});
         setMenuStyle({position: "static"});
+        console.log(visible);
     }
 }
+
+// var visibleStyle = { visibility: "hidden" }; 
+// if (!visible) style.visibility = "visible";
 
 return (
     <div className="navbar">
         
         <div className="menu item-1">
-            <img alt={""} className="menu-icon" style={menuStyle} src={menu} onClick={changeVisibility}/>
+            <img className="menu-icon" style={menuStyle} src={menu} onClick={changeVisibility}></img>
         </div>
-        <h1 className="item-2 font-face-arv">Comment Hunter</h1>
+        <h1 className="item-2 font-face-Cin">Comment Hunter</h1>
         <div className="menu item-1"></div>
         <div className="sidebar" style={visibleStyle}>
             <div className="topside">
-                <h2 className="config-header">Configurations</h2>
+                {/* <img className="menu item-1" src={menu} onClick={}></img> */}
+                <h4 className="config-header">Configurations</h4>
             </div>
             <div className="bottomside">
 
@@ -38,12 +47,12 @@ return (
                 </div>
 
                 <div className="radio-select">
-                    <label>Sunburst</label>
+                    <label for="sunburst">Sunburst</label>
                     <input className="radio" type="radio" value="sunburst" name="graphs" onClick={sunGraph} defaultChecked />
                 </div>
 
                 <div className="radio-select">
-                    <label>BubbleChart</label>
+                    <label for="bubble">BubbleChart</label>
                     <input className="radio" type="radio" value="bubble" name="graphs" onClick={bubbleGraph} />
                 </div>
 
@@ -54,22 +63,29 @@ return (
                 </div>
 
                 <div className="radio-select">
-                    <label>1 hr</label>
+                    <label for="1hr">1 hr</label>
                     <input className="radio" type="radio" value="1hr" name="time" onClick={set1hr} />
                 </div>
 
                 <div className="radio-select">
-                    <label>12 hrs</label>
-                    <input className="radio" type="radio" value="12hrs" name="time" onClick={set12hr}/>
+                    <label for="sunburst">24 hrs</label>
+                    <input className="radio" type="radio" value="24hrs" name="time" onClick={set1day}/>
                 </div>
 
                 <div className="radio-select">
-                    <label>24 hrs</label>
-                    <input className="radio" type="radio" value="24hrs" name="time" onClick={set24hr} defaultChecked/>
+                    <label for="sunburst">1 week</label>
+                    <input className="radio" type="radio" value="1week" name="time" onClick={set1week} defaultChecked/>
                 </div>   
  
             </div>
         </div>
+        
+        {/* <div className="menu">
+            
+        </div> */}
+        
+        
+
     </div>
   );
 }

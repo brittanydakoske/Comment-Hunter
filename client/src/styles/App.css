@@ -19,6 +19,17 @@
   src: local("Girassol"),
   url("../fonts/Girassol/Girassol-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Cinzel";
+  src: local("Cinzel"), 
+  url("../fonts/Cinzel/Cinzel-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+  url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype");
+}
 
 .font-face-arv {
   font-family: "Arvo";
@@ -32,6 +43,15 @@
 
 .font-face-gir {
   font-family: "Girassol";
+}
+
+.font-face-Cin {
+  font-family: "Cinzel";
+  font-weight: 600;
+}
+
+.font-face-san {
+  font-family: "OpenSans";
 }
 
 .App {
@@ -52,8 +72,8 @@
 
 .config-header {
   position: fixed;
-  left: 70px;
-  top: 6px;
+  left: 60px;
+  top: -13px;
 }
 
 .bottomside {
@@ -95,14 +115,21 @@ h2 {
   color: white;
   text-align: center; 
   font-family: "Oswald";
-  font-size: 40px;
+  font-size: 30px;
+}
+
+h4 {
+  color: white;
+  text-align: center; 
+  font-family: "Oswald";
+  font-size: 25px;
 }
 
 p {
   color: white;
   text-align: center; 
-  font-family: "Arvo";
-  font-size: 28px;
+  font-family: "OpenSans";
+  font-size: 23px;
 }
 
 hr {
@@ -173,6 +200,7 @@ img {
 
 .section p {
   text-align: justify;
+  margin: -20px auto;
 }
 
 .section-left {

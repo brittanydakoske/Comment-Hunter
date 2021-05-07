@@ -1,21 +1,23 @@
-import stock1 from '../images/stonks.jpg';
-import stock2 from '../images/stonks2.jpg';
-import crypto from '../images/crypto.jpg';
+import icon from '../images/wsbet.jpg';
+import charts from '../images/graphs.png';
+import menu from '../images/usermenu.png';
+import sunchart from '../images/sunchart.png';
 const cols = [
     {
         id: 1,
-        image: stock1,
-        description: 'blah blah blah'
+        image: charts,
+        description: 'Visualize the data more accurately through different types of graphics.'
+        
     }, 
     {
         id: 2,
-        image: crypto,
-        description: 'blah blah blah'
+        image: menu,
+        description: 'Customize the graphics and the time frame by clicking on the menu at the top left of the page.'
     },
     {
         id: 3,
-        image: stock2,
-        description: 'blah blah blah'
+        image: sunchart,
+        description: 'Click on the Sunburst chart to interact with the different stock categories.'
     }
 ]
 
@@ -24,9 +26,8 @@ function Grid() {
 return (
 
     <div className="row">
-
-        {/*Warning: Each child in a list should have a unique "key" prop.*/}
-        {cols.map((prop, i) => (<div className="column" key={i}><img src={prop.image} alt={''}/><p>{prop.description}</p></div>))}
+    
+        {cols.map((prop) => (<div className="column"><img src={prop.image}></img><p>{prop.description}</p></div>))}
 
     </div>
   );

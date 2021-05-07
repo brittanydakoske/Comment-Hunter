@@ -7,8 +7,8 @@ function Section2() {
           <img alt={""} className="imgSection" src={rdt}></img>
         </div>
         <div className="item text-sec">
-          <h2>Visualizing and analyzing wall street bets</h2>
-          <p>The graphics data being rendered for this project consists of finding mentions regarding wall street bets. Because this topic is an excellent example that is often mentioned over reddit on a daily basis, scrapping data over this topic is an excellent example to build a data scrapper around it for this particular project.</p>
+          <h2>Analyzing Wall Street Bets</h2>
+          <p>For this demonstration, Comment Hunter is currently searching the subreddit r/wallstreetbets for mentions of stock ticker symbols. Each time a new comment is posted to the subreddit, Comment Hunter checks its contents against a list of stocks and updates the database accordingly. The above graphs show the ten most-mentioned stocks over the user’s selected timeframe.</p>
         </div>
       </div>
   );
