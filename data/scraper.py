@@ -61,9 +61,9 @@ for comment in subreddit.stream.comments(skip_existing=True):
             else:
                 sector = ''
             if (ticker != '' and ticker in comment.body.split()) or (fullname != '' and fullname in comment.body):
-                print(comment.body)
-                print(ticker, fullname, sector)
-                print("\n\n\n")
+                # print(comment.body)
+                # print(ticker, fullname, sector)
+                # print("\n\n\n")
                 # insert
                 new_stock = generateStock(ticker, fullname, sector)
                 s.add(new_stock)
