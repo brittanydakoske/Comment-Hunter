@@ -54,7 +54,7 @@ function App() {
           } 
         </div>
         
-        <h2>Analyzing data efficiently</h2>
+        <h2>Analyzing Data Efficiently</h2>
         <Grid />
         <Section1 />
         <Section2 />
