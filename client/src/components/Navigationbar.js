@@ -60,12 +60,12 @@ return (
 
                 <div className="radio-select">
                     <label>12 hrs</label>
-                    <input className="radio" type="radio" value="24hrs" name="time" onClick={set12hr}/>
+                    <input className="radio" type="radio" value="12hrs" name="time" onClick={set12hr}/>
                 </div>
 
                 <div className="radio-select">
                     <label>24 hrs</label>
-                    <input className="radio" type="radio" value="1week" name="time" onClick={set24hr} defaultChecked/>
+                    <input className="radio" type="radio" value="24hrs" name="time" onClick={set24hr} defaultChecked/>
                 </div>   
  
             </div>
