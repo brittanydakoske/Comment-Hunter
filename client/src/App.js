@@ -14,6 +14,7 @@ import {SelectTimeFrame} from "./components/selectTimeFrame";
 import Grid from "./components/Grid.js";
 import Section1 from "./components/Section1.js";
 import Section2 from "./components/Section2.js";
+import About from "./components/About.js";
 import Slider from "./components/Slider.js";
 import {dataFormat, sampleData} from "./components/dataFormat.js";
 
@@ -110,12 +111,14 @@ function App() {
         <Section2 />
         
         <hr></hr>
+
         <div className="about">
           <h2>Team Members</h2>
           <p>Comment Hunter is a collaborative project created by a group of Computer Science students at the California State University at Northridge. Below is a list of team members along with their individual responsibilities and contributions to the project.</p>
         </div>
+        <About />
 
-        <Slider />
+        {/* <Slider /> */}
 
         <footer>
           <p>Copyright Â© 2021 Comment Hunter - All Rights Reserved.</p>
