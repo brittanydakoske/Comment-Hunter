@@ -12,12 +12,10 @@ const changeVisibility = () => {
         setVisible(true);
         setVisibleStyle({visibility: "visible"});
         setMenuStyle({position: "fixed"});
-        console.log(visible);
     } else {
         setVisible(false);
         setVisibleStyle({visibility: "hidden"});
         setMenuStyle({position: "static"});
-        console.log(visible);
     }
 }
 

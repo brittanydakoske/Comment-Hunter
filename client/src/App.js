@@ -1,20 +1,14 @@
 import React from 'react';
 import Sunburst from 'react-sunburst-d3-v4';
 import BubbleChart from "./components/BubbleChart";
-import './styles/App.css'; //styles/App.css ok
+import './styles/App.css';
 import Navigationbar from "./components/Navigationbar";
 import {SelectChart} from "./components/selectChart";
 import {SelectTimeFrame} from "./components/selectTimeFrame";
 import Grid from "./components/Grid.js";
 import Section1 from "./components/Section1.js";
 import Section2 from "./components/Section2.js";
-import Slider from "./components/Slider.js";
 import {dataFormat} from "./components/dataFormat.js";
-
-const onSelect = (event) => {
-  // console.log("SUNBURST_TEST");
-  // console.log(event);
-};
 
 function App() {
   const {chart, sunGraph, bubbleGraph} = SelectChart();
@@ -32,14 +26,14 @@ function App() {
           set12hr = {set12hr}
           set24hr = {set24hr}
         />
-        {/* <Navbar/> */}
+
         <div className="graph-container">
 
             {data ?
                 chart === 'Sunburst' ?
                   <Sunburst
                       data={dataFormat(data)}
-                      onSelect={ onSelect }
+                      onSelect={ () => {} }
                       scale="linear"
                       tooltipContent={<div className="sunburstTooltip"  />}
                       tooltip
@@ -57,19 +51,17 @@ function App() {
           } 
         </div>
         
-        <hr></hr>
+        <hr/>
         <h2>Analyzing Data Efficiently</h2>
         <Grid />
         <Section1 />
         <Section2 />
         
-        <hr></hr>
+        <hr/>
         <div className="about">
           <h2>Team Members</h2>
           <p>Comment Hunter is a collaborative project created by a group of Computer Science students at the California State University at Northridge. Below is a list of team members along with their individual responsibilities and contributions to the project.</p>
         </div>
-
-        <Slider />
 
         <footer>
           <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
