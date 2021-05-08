@@ -13,13 +13,13 @@ class BubbleChart extends React.Component {
     if (this.props.data.length > 0) {
       this.minValue =
           0.95 *
-          d3.min(this.props.data, (item) => {
+          d3.min(nextProps.data, (item) => {
             return item.v;
           });
 
       this.maxValue =
           1.05 *
-          d3.max(this.props.data, (item) => {
+          d3.max(nextProps.data, (item) => {
             return item.v;
           });
 
@@ -133,8 +133,7 @@ class BubbleChart extends React.Component {
       });
 
       return (
-        <g
-          transform={`translate(${this.props.width / 2}, ${
+        <g transform={`translate(${this.props.width / 2}, ${
             this.props.height / 2
           })`}
         >
