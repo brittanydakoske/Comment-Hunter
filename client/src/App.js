@@ -22,16 +22,6 @@ function App() {
 
   CallUseEffect();
 
-  //Joseph can adjust this to the name of the keys of the data
-  var reDraw;
-
-  if(data) {
-    reDraw = data.map(stock => ({
-      v: stock.value,
-      k: stock.ticker,
-    }));
-  }
-
   return (
       <div className="App">
         
@@ -58,7 +48,12 @@ function App() {
                       width="580"
                       height="500"
                   />
-                  : <BubbleChart useLabels data={ reDraw } /> : ''
+                  : <BubbleChart useLabels data={
+                        data.map(stock => ({
+                            v: stock.value,
+                            k: stock.ticker,
+                        }))
+                    } /> : ''
           } 
         </div>
         
