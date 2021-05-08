@@ -22,16 +22,6 @@ function App() {
 
   CallUseEffect();
 
-  //Joseph can adjust this to the name of the keys of the data
-  var reDraw;
-
-  // if(data != 0) {
-  //   reDraw = data.map(v => ({
-  //     v: v.values,
-  //     // k: v.keys
-  //     k: v.ticker
-  //   }));
-  // }
   return (
       <div className="App">
         
@@ -45,26 +35,28 @@ function App() {
         {/* <Navbar/> */}
         <div className="graph-container">
 
-           { chart === 'Sunburst' ?          
-              <Sunburst
-                  data={dataFormat(data)}
-                  onSelect={ onSelect }
-                  scale="linear"
-                  tooltipContent={<div className="sunburstTooltip"  />}
-                  tooltip
-                  tooltipPosition="right"
-                  keyId="anagraph"
-                  width="580"
-                  height="500"            
-              />          
-              : 
-              data ? <BubbleChart data={
-                  data.map(v => ({
-                      v: v.values,
-                      // k: v.keys
-                      k: v.ticker
-                  }))} useLabels /> : ""
-             
+            {data ?
+                chart === 'Sunburst' ?
+                  <Sunburst
+                      data={dataFormat(data)}
+                      onSelect={ onSelect }
+                      scale="linear"
+                      tooltipContent={<div className="sunburstTooltip"  />}
+                      tooltip
+                      tooltipPosition="right"
+                      keyId="anagraph"
+                      width="580"
+                      height="500"
+                  />
+                  : <BubbleChart
+                        useLabels
+                        data={ () =>
+                          data.map(v => ({
+                              v: v.value,
+                              // k: v.keys
+                              k: v.ticker
+                          }))}
+                   /> : ''
           } 
         </div>
         
