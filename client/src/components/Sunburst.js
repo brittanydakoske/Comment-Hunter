@@ -160,23 +160,6 @@ class Sunburst extends React.Component {
           .innerRadius(d => Math.max(0, y(d.y0)))
           .outerRadius(d => Math.max(0, y(d.y1)))
 
-      // Add labels, using .centroid() to position
-      d3.select('g')
-          .selectAll('text')
-          .data(arcData)
-          .enter()
-          .append('text')
-          .each(function (d)
-          {
-            var centroid = arc.centroid(d);
-            d3.select(this)
-                .attr('x', centroid[0])
-                .attr('y', centroid[1])
-                .attr('dy', '0.33em')
-                .text("TEST");
-          });
-
-
       const hueDXScale = d3.scaleLinear()
           .domain([0, 1])
           .range([0, 360])
