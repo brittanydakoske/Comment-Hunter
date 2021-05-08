@@ -9,6 +9,7 @@ import Grid from "./components/Grid.js";
 import Section1 from "./components/Section1.js";
 import Section2 from "./components/Section2.js";
 import {dataFormat} from "./components/dataFormat.js";
+import About from "./components/About";
 
 function App() {
   const {chart, sunGraph, bubbleGraph} = SelectChart();
@@ -62,6 +63,8 @@ function App() {
           <h2>Team Members</h2>
           <p>Comment Hunter is a collaborative project created by a group of Computer Science students at the California State University at Northridge. Below is a list of team members along with their individual responsibilities and contributions to the project.</p>
         </div>
+
+        <About />
 
         <footer>
           <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
