@@ -69,6 +69,24 @@ class BubbleChart extends React.Component {
     this.mounted = false;
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.data.length > 0) {
+      this.minValue =
+          0.95 *
+          d3.min(nextProps.data, (item) => {
+            return item.v;
+          });
+
+      this.maxValue =
+          1.05 *
+          d3.max(nextProps.data, (item) => {
+            return item.v;
+          });
+
+      this.simulatePositions(nextProps.data);
+    }
+  }
+
   radiusScale = (value) => {
     const fx = d3
       .scaleSqrt()

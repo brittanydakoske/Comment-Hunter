@@ -1,4 +1,4 @@
- * {
+* {
   box-sizing: border-box;
 } 
 
@@ -455,3 +455,47 @@ label {
   color: white;
 }
 
+.group-container {
+  margin: 50px auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
+.team-member img {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.team-member p {
+  /* color: black; */
+  font-size: 20px;
+}
+
+.team-member h3 {
+  padding-top: 25px;
+  margin: 0 auto;
+  font-size: 26px;
+}
+
+.role {
+  margin: 0 auto;
+}
+
+.team-member {
+  color: white;
+  /* background-color: white; */
+  flex-grow: 1;
+  width: 32.5%;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 5px;
+  /* border: solid #1f1f1f; */
+  /* background-color: white; */
+}
+
+#one {
+  flex-grow: 0;
+}
