@@ -25,13 +25,13 @@ function App() {
   //Joseph can adjust this to the name of the keys of the data
   var reDraw;
 
-  if(data != 0) {
-    reDraw = data.map(v => ({
-      v: v.values,
-      // k: v.keys
-      k: v.ticker
-    }));
-  }
+  // if(data != 0) {
+  //   reDraw = data.map(v => ({
+  //     v: v.values,
+  //     // k: v.keys
+  //     k: v.ticker
+  //   }));
+  // }
   return (
       <div className="App">
         
@@ -58,7 +58,12 @@ function App() {
                   height="500"            
               />          
               : 
-              reDraw ? <BubbleChart data={reDraw} useLabels /> : "" 
+              data ? <BubbleChart data={
+                  data.map(v => ({
+                      v: v.values,
+                      // k: v.keys
+                      k: v.ticker
+                  }))} useLabels /> : ""
              
           } 
         </div>
