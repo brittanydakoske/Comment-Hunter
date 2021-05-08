@@ -1,24 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
 
-/**
- * Copyright (c) 2021 by Jackfiallos (https://codepen.io/Jackfiallos/pen/jLWrjb)
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
- * of the Software, and to permit persons to whom the Software is furnished to do
- * so, subject to the following conditions:
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
- * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
- * PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
- * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
-
 class BubbleChart extends React.Component {
   static defaultProps = {
     data: [],
@@ -26,6 +8,24 @@ class BubbleChart extends React.Component {
     width: 600,
     height: 400,
   };
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.data.length > 0) {
+      this.minValue =
+          0.95 *
+          d3.min(this.props.data, (item) => {
+            return item.v;
+          });
+
+      this.maxValue =
+          1.05 *
+          d3.max(this.props.data, (item) => {
+            return item.v;
+          });
+
+      this.simulatePositions(nextProps.data);
+    }
+  }
 
   constructor(props) {
     super(props);
@@ -48,8 +48,6 @@ class BubbleChart extends React.Component {
   }
 
   componentDidMount() {
-
-    // console.log("The data is now: " + this.state.data);
     if (this.props.data.length > 0) {
       this.minValue =
         0.95 *
@@ -77,7 +75,7 @@ class BubbleChart extends React.Component {
       .range([1, 100])
       .domain([this.minValue, this.maxValue]);
 
-    return fx(value);
+    return fx(value) > 0 ? fx(value) : 0;
   };
   simulatePositions = (data) => {
     this.simulation = d3
@@ -195,3 +193,21 @@ class BubbleChart extends React.Component {
   }
 }
 export default BubbleChart;
+
+/**
+ * Copyright (c) 2021 by Jackfiallos (https://codepen.io/Jackfiallos/pen/jLWrjb)
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ * of the Software, and to permit persons to whom the Software is furnished to do
+ * so, subject to the following conditions:
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ * INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+ * PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
