@@ -1,5 +1,3 @@
-import icon from '../images/cog.jpg';
-import propic from '../images/luis.JPG';
 import luis from '../images/luis.JPG';
 import alex from '../images/alex.jpg';
 import brit from '../images/Brit.jpg';
@@ -8,8 +6,6 @@ import nicole from '../images/nicole.jpg';
 import denys from '../images/denys.jpg';
 import joey from '../images/joey.jpg';
 import React from 'react';
-import { permittedCrossDomainPolicies } from 'helmet';
-//import $ from 'jquery';
 
 const group = [
     {
