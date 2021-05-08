@@ -64,7 +64,7 @@ function App() {
           <p>Comment Hunter is a collaborative project created by a group of Computer Science students at the California State University at Northridge. Below is a list of team members along with their individual responsibilities and contributions to the project.</p>
         </div>
 
-        {/*<About />*/}
+        <About />
 
         <footer>
           <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
