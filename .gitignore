@@ -25,6 +25,7 @@ yarn-error.log*
 
 *.orig
 .env
-*.xml
 *.iml
+/.vscode/
+/client/.vscode/
 *.pyc
