@@ -28,3 +28,4 @@ yarn-error.log*
 *.iml
 /.vscode/
 /client/.vscode/
+*.pyc
