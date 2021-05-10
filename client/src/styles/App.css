@@ -118,6 +118,10 @@ h2 {
   font-size: 30px;
 }
 
+h3 {
+  color: white;
+}
+
 h4 {
   color: white;
   text-align: center; 
@@ -488,7 +492,7 @@ label {
   color: white;
   /* background-color: white; */
   flex-grow: 1;
-  width: 32.5%;
+  width: 32%;
   padding: 10px 15px;
   text-align: center;
   margin: 5px;

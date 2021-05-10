@@ -17,49 +17,49 @@ const group = [
         id: "three",
         name: "Alex Rose",
         role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        description: "Configured Node server and managed system integrations."
     },
     {
         image: brent,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Brent Gibson",
+        role: "Project Manager, Programmer",
+        description: "Scheduled group meetings, and wrote programs in Python and SQLAlchemy used in the Data Management system component."
     },
     {
         image: brit,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Brittany Dakoske",
+        role: "Software Engineer",
+        description: "Responsible for using of the Reddit API to push stock mentions to the database."
     },
     {
         image: nicole,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Nicole Berlin",
+        role: "Database Manager",
+        description: "Worked on the database and managing the list of stock tickers for the site."
     },
     {
         image: luis,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Luis Rangel",
+        role: "Front-End Developer",
+        description: "Responsible for setting up the client interface components using React.js."
     },
     {
         image: denys,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Denys Tavarez",
+        role: "Front-End Visualization Developer",
+        description: "Responsible for the D3 Sunburst graphic and webpage aesthetics."
     },
     {
         image: joey,
         id: "one",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Joseph Wang",
+        role: "Data Visualization Developer",
+        description: "Developed the D3 BubbleChart graphic and worked on the webpage design."
     },
 
 ]

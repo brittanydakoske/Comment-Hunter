@@ -121,7 +121,7 @@ function App() {
         {/* <Slider /> */}
 
         <footer>
-          <p>Copyright Â© 2021 Comment Hunter - All Rights Reserved.</p>
+          <p>Copyright © 2021 Comment Hunter - All Rights Reserved.</p>
         </footer>
       </div>
   );
