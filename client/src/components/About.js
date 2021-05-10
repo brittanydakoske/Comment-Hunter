@@ -13,49 +13,49 @@ const group = [
         id: "three",
         name: "Alex Rose",
         role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        // description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
     },
     {
         image: brent,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Brent Gibson",
+        role: "Project Manager",
+        // description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
     },
     {
         image: brit,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Brittany Dakoske",
+        role: "Software Engineer",
+        // description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
     },
     {
         image: nicole,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Nicole Berlin",
+        role: "Database Administrator",
+        // description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
     },
     {
         image: luis,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Luis Rangel",
+        role: "React Developer",
+        // description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
     },
     {
         image: denys,
         id: "three",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Denys Tavarez",
+        role: "Front-end Developer",
+        // description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
     },
     {
         image: joey,
         id: "one",
-        name: "Alex Rose",
-        role: "Back-end developer",
-        description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
+        name: "Joseph Wang",
+        role: "Data Visualization Developer",
+        // description: "Developed the back-end such as the database and the server. Original team member with the idea of developing a scrapper application as well."
     },
 
 ]
@@ -66,7 +66,7 @@ function About() {
   return (
 
     <div className="group-container">
-        {group.map((prop) => (<div className="team-member" id={prop.id}><img src={prop.image}></img><h3>{prop.name}</h3><p className="role">{prop.role}</p><p>{prop.description}</p></div>))}
+        {group.map((prop) => (<div className="team-member" id={prop.id}><img src={prop.image}></img><h3>{prop.name}</h3><p className="role">{prop.role}</p></div>))}
     </div>
         
 
