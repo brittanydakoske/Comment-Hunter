@@ -9,6 +9,24 @@ class BubbleChart extends React.Component {
     height: 400,
   };
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.data.length > 0) {
+      this.minValue =
+          0.95 *
+          d3.min(nextProps.data, (item) => {
+            return item.v;
+          });
+
+      this.maxValue =
+          1.05 *
+          d3.max(nextProps.data, (item) => {
+            return item.v;
+          });
+
+      this.simulatePositions(nextProps.data);
+    }
+  }
+
   constructor(props) {
     super(props);
 
@@ -30,8 +48,6 @@ class BubbleChart extends React.Component {
   }
 
   componentDidMount() {
-
-    console.log("The data is now: " + this.state.data);
     if (this.props.data.length > 0) {
       this.minValue =
         0.95 *
@@ -77,7 +93,7 @@ class BubbleChart extends React.Component {
       .range([1, 100])
       .domain([this.minValue, this.maxValue]);
 
-    return fx(value);
+    return fx(value) > 0 ? fx(value) : 0;
   };
   simulatePositions = (data) => {
     this.simulation = d3
@@ -135,8 +151,7 @@ class BubbleChart extends React.Component {
       });
 
       return (
-        <g
-          transform={`translate(${this.props.width / 2}, ${
+        <g transform={`translate(${this.props.width / 2}, ${
             this.props.height / 2
           })`}
         >

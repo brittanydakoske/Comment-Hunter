@@ -1,26 +1,3 @@
-
-/* "name": "TOPICS", "children": [{
-        "name": "Topic A",
-        "children": [
-            {"name": "Sub A1", "size": 4},
-            {"name": "Sub A2", "size": 4}]
-    }, {
-        "name": "Topic B",
-        "children": [{"name": "Sub B1", "size": 3},
-         {"name": "Sub B2", "size": 3}, 
-         {"name": "Sub B3", "size": 3}]
-    }, {
-        "name": "Topic C",
-        "children": [
-            {"name": "Sub C1", "size": 4},
-            {"name": "Sub C2", "size": 4}]
-    }]
-   }*/
-
-   
-
-//    import {sampleData} from "../../../controllers/index"
-const empty = "there is no data to display" ;
 const large = " the array size is too large";
 
 export function dataFormat(input){
@@ -45,15 +22,14 @@ sectors.forEach(sector => {
 });
 input.forEach(stock=>{ 
 let index = children.findIndex(s => s.name === stock.sector)
-children[index].children.push({name: stock.name , size: stock.values})
+children[index].children.push({name: stock.name , size: stock.value})
 
 })
 doneFormat["children"]= children
 
-console.log(doneFormat);
+//console.log(doneFormat);
 return doneFormat
 }
-
 
 export const sampleData =
    [
@@ -118,13 +94,3 @@ export const sampleData =
            "values":"207"
        }
    ]
-var testAr =  [
-    {
-        "ticker":"ETSY",
-        "name":"Etsy",
-        "sector":"Commercial Services",
-        "values":"321"
-    }]
-
-//     var formatEnd = dataFormat(sampleData);
-// console.log(formatEnd)

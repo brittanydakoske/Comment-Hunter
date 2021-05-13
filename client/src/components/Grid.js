@@ -1,4 +1,3 @@
-import icon from '../images/wsbet.jpg';
 import charts from '../images/graphs.png';
 import menu from '../images/usermenu.png';
 import sunchart from '../images/sunchart.png';
@@ -26,9 +25,7 @@ function Grid() {
 return (
 
     <div className="row">
-    
         {cols.map((prop) => (<div className="column"><img src={prop.image}></img><p>{prop.description}</p></div>))}
-
     </div>
   );
 }
