@@ -52,7 +52,6 @@ def run():
     root = tree.getroot()
 
     Base = declarative_base()
-    # recreate_database()  # Testing
     s = Session()
 
     comment_stream = subreddit.stream.comments(skip_existing = True)
@@ -61,7 +60,6 @@ def run():
 
         if(program_flag == False):
             comment_stream.close()
-            #s.close()
 
         cut_off = datetime.now() - timedelta(hours=24)
         s.execute(delete(Stock).where(Stock.date < cut_off))
