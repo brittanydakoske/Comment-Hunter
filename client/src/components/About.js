@@ -66,7 +66,7 @@ function About() {
   return (
 
     <div className="group-container">
-        {group.map((prop) => (<div className="team-member" id={prop.id}><img src={prop.image}></img><h3>{prop.name}</h3><p className="role">{prop.role}</p></div>))}
+        {group.map((prop) => (<div className="team-member" id={prop.id}><img src={prop.image}></img><h3>{prop.name}</h3><p className="role">{prop.role}</p><p>{prop.description}</p></div>))}
     </div>
         
 

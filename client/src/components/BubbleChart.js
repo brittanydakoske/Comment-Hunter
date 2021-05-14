@@ -185,8 +185,6 @@ class BubbleChart extends React.Component {
             fontSize={`${fontSize}px`}
             fontWeight="bold"
           >
-            {/* {Here in the bottom textlabel is retrieving the name of key object into a bubble} */}
-            {/* {item.v} */}
             {textLabel} 
           </text>
         </g>

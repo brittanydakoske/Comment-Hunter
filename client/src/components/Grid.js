@@ -1,6 +1,7 @@
 import charts from '../images/graphs.png';
 import menu from '../images/usermenu.png';
 import sunchart from '../images/sunchart.png';
+
 const cols = [
     {
         id: 1,

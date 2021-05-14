@@ -27,10 +27,10 @@ children[index].children.push({name: stock.name , size: stock.value})
 })
 doneFormat["children"]= children
 
-//console.log(doneFormat);
 return doneFormat
 }
 
+//sample data only for testing purposes
 export const sampleData =
    [
        {

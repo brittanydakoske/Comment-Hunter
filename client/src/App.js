@@ -1,15 +1,15 @@
 import React from 'react';
 import Sunburst from 'react-sunburst-d3-v4';
 import BubbleChart from "./components/BubbleChart";
-import './styles/App.css';
 import Navigationbar from "./components/Navigationbar";
 import {SelectChart} from "./components/selectChart";
 import {SelectTimeFrame} from "./components/selectTimeFrame";
+import {dataFormat} from "./components/dataFormat.js";
 import Grid from "./components/Grid.js";
 import Section1 from "./components/Section1.js";
 import Section2 from "./components/Section2.js";
-import {dataFormat} from "./components/dataFormat.js";
 import About from "./components/About";
+import './styles/App.css';
 
 function App() {
   const {chart, sunGraph, bubbleGraph} = SelectChart();
