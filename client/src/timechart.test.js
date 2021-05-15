@@ -1,10 +1,7 @@
 import {SelectChart} from "./components/selectChart.js";
 import {SelectTimeFrame} from "./components/selectTimeFrame.js";
 import {act, renderHook} from '@testing-library/react-hooks';
-import {get1hr, get1day, get1week} from "./api/request";
-// import { get1hr } from "./api/request.js";
-// import { INET } from "sequelize/types";
-// import { TableSortLabel } from "@material-ui/core";
+import {get1hr, get12hr, get24hr} from "./api/request";
 
 describe("Sunburst", () => {
     it("Sets graph to Sunburst", () => {
@@ -40,35 +37,35 @@ describe("1 hr data", () => {
             result.current.set1hr()
         });
 
-        var dataString = JSON.stringify(set1hr);
+        var dataString = JSON.stringify(get1hr());
         
         expect(JSON.stringify(result.current.data)).toBe(dataString);
     })
 })
 
-describe("1 day data", () => {
-    it("Set data to reflect 1 day worth of data", () => {
+describe("12 hour data", () => {
+    it("Set data to reflect 12 hours worth of data", () => {
         const {result} = renderHook(SelectTimeFrame)
 
         act(() => {
-            result.current.set1day()
+            result.current.set12hr()
         })
 
-        var dataString = JSON.stringify(set1day);
+        var dataString = JSON.stringify(get12hr());
 
         expect(JSON.stringify(result.current.data)).toBe(dataString);
     })
 })
 
-describe("1 week data", () => {
-    it("Set data to reflect 1 week worth of data", () => {
+describe("1 day of data", () => {
+    it("Set data to reflect 1 day worth of data", () => {
         const {result} = renderHook(SelectTimeFrame)
 
         act(() => {
-            result.current.set1week()
+            result.current.set24hr()
         })
 
-        var dataString = JSON.stringify(set1week);
+        var dataString = JSON.stringify(get24hr());
 
         expect(JSON.stringify(result.current.data)).toBe(dataString);
     })
